@@ -1,0 +1,9 @@
+/*!
+ * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014
+ * @version 1.0.0
+ *
+ * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
+ *
+ * For more JQuery/Bootstrap plugins and demos visit http://plugins.krajee.com
+ * For more Yii related demos visit http://demos.krajee.com
+ */.popover{padding:0}.popover>.close{float:right;margin:7px 9px 7px 7px}.popover-default.bottom>.arrow:after{border-bottom-color:#f7f7f7}.popover-primary.bottom>.arrow:after{border-bottom-color:#428bca}.popover-success.bottom>.arrow:after{border-bottom-color:#dff0d8}.popover-danger.bottom>.arrow:after{border-bottom-color:#f2dede}.popover-warning.bottom>.arrow:after{border-bottom-color:#fcf8e3}.popover-info.bottom>.arrow:after{border-bottom-color:#d9edf7}.has-footer.popover.top> .arrow:after{border-top-color:#fbfbfb}.popover-default>.popover-title{color:#333;background-color:#f7f7f7}.popover-primary>.popover-title{color:#fff;background-color:#428bca;border:2px solid #428bca}.popover-success>.popover-title{color:#3c763d;background-color:#dff0d8;border-bottom:1px solid #d6e9c6}.popover-info>.popover-title{color:#31708f;background-color:#d9edf7;border-bottom:1px solid #bce8f1}.popover-warning>.popover-title{color:#8a6d3b;background-color:#fcf8e3;border-bottom:1px solid #faebcc}.popover-danger>.popover-title{color:#a94442;background-color:#f2dede;border-bottom:1px solid #ebccd1}.popover-footer{padding:4px;background-color:#fbfbfb;text-align:right;border-top:1px solid #ebebeb;border-radius:0 0 5px 5px}.popover-footer .btn+.btn{margin-bottom:0;margin-left:5px}.popover-footer .btn-group .btn+.btn{margin-left:-1px}.popover-footer .btn-block+.btn-block{margin-left:0}.popover-loading{padding:30px;background:url(../img/loading.gif) center center}
