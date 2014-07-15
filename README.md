@@ -2,7 +2,7 @@ bootstrap-popover-x
 =====================
 
 Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more. This plugin is inspired by [BootstrapModalPopover](http://scruffles.github.io/BootstrapModalPopover/) 
-for Bootstrap 2.x. This plugin vastly enhances and simplifies these concepts for Bootstrap 3.x, and incorporates various additional styling options.
+for Bootstrap 2.x. This plugin enhances and simplifies these concepts for Bootstrap 3.x, and incorporates various additional styling options.
 
 ## Features  
 
