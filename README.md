@@ -140,19 +140,19 @@ Manually toggles a popover. Returns to the caller before the popover has actuall
 (i.e. before the `shown.bs.modal` or `hidden.bs.modal` event occurs).
 
 ```js
-$('#myPopover1').modal('toggle')
+$('#myPopover1').popoverX('toggle')
 ```
 
 #### show
-Manually opens a modal. Returns to the caller before the modal has actually been shown (i.e. before the `shown.bs.modal` event occurs).
+Manually opens a popover. Returns to the caller before the modal has actually been shown (i.e. before the `shown.bs.modal` event occurs).
 ```js
-$('#myPopover1').modal('show')
+$('#myPopover1').popoverX('show')
 ```
 
 #### hide
-Manually hides a modal. Returns to the caller before the modal has actually been hidden (i.e. before the `hidden.bs.modal` event occurs).
+Manually hides a popover. Returns to the caller before the modal has actually been hidden (i.e. before the `hidden.bs.modal` event occurs).
 ```js
-$('#myPopover1').modal('hide')
+$('#myPopover1').popoverX('hide')
 ```
 
 ## License
