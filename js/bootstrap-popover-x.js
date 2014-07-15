@@ -34,7 +34,7 @@
         },
         getPosition: function () {
             var $element = this.$target;
-            return $.extend({}, ($element.offset()), {
+            return $.extend({}, ($element.position()), {
                 width: $element[0].offsetWidth, height: $element[0].offsetHeight
             });
         },
@@ -44,7 +44,6 @@
             var placement = self.options.placement,
                 actualWidth = $dialog[0].offsetWidth, actualHeight = $dialog[0].offsetHeight,
                 position, pos = self.getPosition();
-
             switch (placement) {
                 case 'bottom':
                     position = {top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2}
@@ -63,7 +62,6 @@
                 .css(position)
                 .addClass(placement)
                 .addClass('in');
-
             $.fn.modal.Constructor.prototype.show.call(self, arguments);
         }
     });
@@ -72,7 +70,7 @@
         var self = this;
         return self.each(function () {
             var $this = $(this);
-            var data = $this.data('popoverX');
+            var data = $this.data('popover-x');
             var options = $.extend({}, $.fn.popoverX.defaults, $this.data(), typeof option == 'object' && option);
             if (!options['$target']) {
                 if (data && data.$target) {
@@ -82,7 +80,7 @@
                 }
             }
             if (!data) {
-                $this.data('popoverX', (data = new PopoverX(this, options)))
+                $this.data('popover-x', (data = new PopoverX(this, options)))
             }
 
             if (typeof option == 'string') {
@@ -100,7 +98,7 @@
         $("[data-toggle='popover-x']").on('click', function (e) {
             var $this = $(this), href = $this.attr('href'),
                 $dialog = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))), //strip for ie7
-                option = $dialog.data('popoverX') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $dialog.data(), $this.data());
+                option = $dialog.data('popover-x') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $dialog.data(), $this.data());
             e.preventDefault();
             $dialog.trigger('click.target.popoverX');
             if (option !== 'toggle') {
