@@ -9,8 +9,9 @@ for Bootstrap 2.x. This plugin enhances and simplifies these concepts for Bootst
 - The extended popover can be rendered just like a bootstrap modal dialog with the bootstrap popover styling. Since the plugin extends the bootstrap modal,
   all features of the [bootstrap modal](http://getbootstrap.com/javascript/#modals) and its events are also available.
 - Adds a popover footer along with header. Configuration of the HTML content for the popover is much easier, just like a bootstrap modal.
-- Configure various prebuilt styles/templates. In addition to a default grey, the bootstrap 3 contextual color styles of primary, info, success, danger, and warning 
-  can be used
+- Specially styles and spaces out bootstrap buttons added in popover footer.
+- Configure various prebuilt styles/templates. In addition to a default (grey), the bootstrap 3 contextual color styles of `primary`, 
+  `info`, `success`, `danger`, and `warning` can be used.
 
 ## Demo
 
@@ -108,6 +109,14 @@ The plugin supports these events:
 #### click.target.popoverX
 This event is fired when the popover target button is clicked to open the popover dialog.
 
+#### load.complete.popoverX
+This event is fired when the popover has loaded content using the remote option.
+
+#### keyup.target.popoverX
+This event is fired when the escape key is pressed to hide the popover.
+
+The following events are inherited from bootstrap modal:
+
 #### show.bs.modal
 This event fires immediately when the `show` instance method is called. If caused by a click, 
 the clicked element is available as the `relatedTarget` property of the event.
@@ -123,7 +132,7 @@ This event is fired immediately when the `hide` instance method has been called.
 This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete).
 
 #### loaded.bs.modal
-This event is fired when the modal has loaded content using the remote option.
+This event is fired when the popover has loaded content using the remote option.
 
 **Example:**
 ```js
