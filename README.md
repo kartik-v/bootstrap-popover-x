@@ -131,9 +131,6 @@ This event is fired immediately when the `hide` instance method has been called.
 #### hidden.bs.modal
 This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete).
 
-#### loaded.bs.modal
-This event is fired when the popover has loaded content using the remote option.
-
 **Example:**
 ```js
 $('#myPopover1').on('hidden.bs.modal', function (e) {
