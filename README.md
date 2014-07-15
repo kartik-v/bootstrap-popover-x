@@ -15,7 +15,7 @@ The plugin offers these enhanced features:
 - Configure various prebuilt styles/templates. In addition to a default (grey), the bootstrap 3 contextual color styles of `primary`, 
   `info`, `success`, `danger`, and `warning` can be used.
 - Control popover placements `top`, `bottom`, `left`, or `right` of the target element.
-- Specially style the arrow to be consistent for each contextual color style and popover placement with respect to target.
+- Specially style the popover arrow to be consistent for each contextual color and popover placement.
 
 ## Demo
 
