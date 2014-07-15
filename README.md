@@ -57,13 +57,13 @@ You must first load the following assets in your header.
 
 ```html
 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
-<link href="path/to/css/popover-x.min.css" media="all" rel="stylesheet" type="text/css" />
+<link href="path/to/css/bootstrap-popover-x.min.css" media="all" rel="stylesheet" type="text/css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.js"></script>
-<script src="path/to/js/popover-x.min.js" type="text/javascript"></script>
+<script src="path/to/js/bootstrap-popover-x.min.js" type="text/javascript"></script>
 ```
 
-If you noticed, you need to load the `bootstrap.min.css`, `jquery.min.js`, and `bootstrap.min.js` in addition to the `popover-x.min.css` and `popover-x.min.js` for
+If you noticed, you need to load the `bootstrap.min.css`, `jquery.min.js`, and `bootstrap.min.js` in addition to the `bootstrap-popover-x.min.css` and `bootstrap-popover-x.min.js` for
 the plugin to work with default settings. 
 
 > Note: The plugin extends the **bootstrap modal plugin** and hence the `bootstrap.min.js` must be loaded before `popover-x.min.js`.
