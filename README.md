@@ -24,7 +24,7 @@ View the [plugin documentation](http://plugins.krajee.com/popover-x) and [plugin
 
 ## Pre-requisites  
 
-1. [Bootstrap 3.x](http://getbootstrap.com/)
+1. [Bootstrap 3.x](http://getbootstrap.com/) (Requires bootstrap `modal.js`)
 2. Latest [JQuery](http://jquery.com/)
 3. Most browsers supporting CSS3 & JQuery. 
 
