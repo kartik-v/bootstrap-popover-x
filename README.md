@@ -92,14 +92,14 @@ $('#myPopover1').popoverX(options)
 The plugin supports all options that are supported by the [bootstrap modal](http://getbootstrap.com/javascript/#modals). The following options are
 important for the popover:
 
-##### placement
+#### placement
 _string_, the positioning of the popover with respect to the initialized element/button. It can be one of `left`, `right`, `top`, `bottom`. 
 Defaults to `right`.
 
-##### keyboard
+#### keyboard
 _boolean_, when set to `true`, it closes the popover when escape key is pressed. Defaults to `true`.
 
-##### show
+#### show
 _boolean_, shows the popover when initialized. Defaults to `true`.
 
 ### Plugin Events
