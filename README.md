@@ -90,15 +90,14 @@ to target a specific popover to toggle.
 Alternatively, you can initialize the popover manually on your page via javascript.
 
 ```js
-$('#myPopover1').popoverX(options)
+$('#myPopover1').popoverX(options);
 ```
 
 ## Documentation
 
 ### Plugin Options
 
-The plugin supports all options that are supported by the [bootstrap modal](http://getbootstrap.com/javascript/#modals). The following options are
-important for the popover:
+The plugin supports all options that are supported by the [bootstrap modal](http://getbootstrap.com/javascript/#modals). The following options are important for the `bootstrap-popover-x` plugin:
 
 #### placement
 _string_, the positioning of the popover with respect to the initialized element/button. It can be one of `left`, `right`, `top`, `bottom`. 
