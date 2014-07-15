@@ -138,8 +138,8 @@ This event is fired when the popover has finished being hidden from the user (wi
 **Example:**
 ```js
 $('#myPopover1').on('hidden.bs.modal', function (e) {
-  // do something...
-})
+    // do something...
+});
 ```
 
 ### Plugin Methods
