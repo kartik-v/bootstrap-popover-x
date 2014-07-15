@@ -9,7 +9,7 @@ for Bootstrap 2.x. This plugin enhances and simplifies these concepts for Bootst
 The plugin offers these enhanced features:
 
 - The extended popover can be rendered just like a bootstrap modal dialog with the bootstrap popover styling. Since the plugin extends the bootstrap modal,
-  all features of the [bootstrap modal](http://getbootstrap.com/javascript/#modals) and its events are also available.
+  all features of the [bootstrap modal](http://getbootstrap.com/javascript/#modals) and its methods are also available.
 - Adds a popover footer along with header. Configuration of the HTML content for the popover is much easier, just like a bootstrap modal.
 - Specially styles and spaces out bootstrap buttons added in popover footer.
 - Configure various prebuilt styles/templates. In addition to a default (grey), the bootstrap 3 contextual color styles of `primary`, 
