@@ -115,8 +115,6 @@ This event is fired when the popover has loaded content using the remote option.
 #### keyup.target.popoverX
 This event is fired when the escape key is pressed to hide the popover.
 
-The following events are inherited from bootstrap modal:
-
 #### show.bs.modal
 This event fires immediately when the `show` instance method is called. If caused by a click, 
 the clicked element is available as the `relatedTarget` property of the event.
