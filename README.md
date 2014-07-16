@@ -79,7 +79,7 @@ to target a specific popover to toggle.
 <button class="btn btn-primary btn-lg" data-toggle="popover-x" data-target="#myPopover1" data-placement="top">Top</button>
 <div id="myPopover1" class="popover popover-default">
     <div class="arrow"></div>
-    <h3 class="popover-title"><span class="close pull-right" data-dismiss="popover-x">&times;</span>Title</h3>
+    <h3 class="popover-title"><span class="close" data-dismiss="popover-x">&times;</span>Title</h3>
     <div class="popover-content">
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
     </div>

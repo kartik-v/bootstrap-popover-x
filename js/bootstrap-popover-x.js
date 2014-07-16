@@ -20,6 +20,7 @@
         constructor: PopoverX,
         init: function () {
             var self = this;
+            self.$body = $(document.body);
             self.$target = self.options.$target;
             if (self.$element.find('.popover-footer').length) {
                 self.$element
