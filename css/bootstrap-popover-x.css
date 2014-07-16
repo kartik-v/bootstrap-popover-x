@@ -10,13 +10,15 @@
 .popover {
     padding: 0;
 }
+.popover-lg {
+    min-width: 480px;
+}
+.popover-md {
+    min-width: 350px;
+}
 .popover > .close {
     float: right;
     margin: 7px 9px 7px 7px;
-}
-.popover-loading {
-    padding: 30px;
-    background: url('../img/loading.gif') center center;
 }
 .popover-default.bottom > .arrow:after {
   border-bottom-color: #f7f7f7;
@@ -84,4 +86,8 @@
 }
 .popover.has-footer.top >.arrow:after, .has-footer.popover.top >.arrow:after  {
   border-top-color: #fbfbfb;
+}
+.popover-loading {
+    padding: 30px;
+    background: url('../img/loading.gif') center center;
 }
