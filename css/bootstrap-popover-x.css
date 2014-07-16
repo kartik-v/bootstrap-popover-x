@@ -32,9 +32,6 @@
 .popover-info.bottom > .arrow:after {
   border-bottom-color: #d9edf7;
 }
-.has-footer.popover.top> .arrow:after {
-  border-top-color: #fbfbfb;
-}
 .popover-default > .popover-title {
   color: #333;
   background-color: #f7f7f7;
@@ -80,6 +77,9 @@
 }
 .popover-footer .btn-block + .btn-block {
   margin-left: 0;
+}
+.popover.has-footer.top >.arrow:after, .has-footer.popover.top >.arrow:after  {
+  border-top-color: #fbfbfb;
 }
 .popover-loading {
     padding: 30px;
