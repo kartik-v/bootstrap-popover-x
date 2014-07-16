@@ -73,7 +73,7 @@
 }
 .popover-footer .btn + .btn {
   margin-bottom: 0;
-  margin-left: 1px;
+  margin-left: 4px;
 }
 .popover-footer .btn-group .btn + .btn {
   margin-left: -1px;
