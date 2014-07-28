@@ -155,6 +155,12 @@ Manually toggles a popover. Returns to the caller before the popover has actuall
 $('#myPopover1').popoverX('toggle')
 ```
 
+#### refreshPosition
+Refresh the position of the popover via javascript.
+```js
+$('#myPopover1').popoverX('refreshPosition')
+```
+
 #### show
 Manually opens a popover. Returns to the caller before the modal has actually been shown (i.e. before the `shown.bs.modal` event occurs).
 ```js

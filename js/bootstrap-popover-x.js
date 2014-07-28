@@ -39,10 +39,8 @@
                 width: $element[0].offsetWidth, height: $element[0].offsetHeight
             });
         },
-        show: function () {
-            var self = this, $dialog = self.$element;
-            $dialog.css({ top: 0, left: 0, display: 'block', 'z-index': 1050 });
-            var placement = self.options.placement,
+        refreshPosition: function () {
+            var self = this, $dialog = self.$element, placement = self.options.placement,
                 actualWidth = $dialog[0].offsetWidth, actualHeight = $dialog[0].offsetHeight,
                 position, pos = self.getPosition();
             switch (placement) {
@@ -63,6 +61,11 @@
                 .css(position)
                 .addClass(placement)
                 .addClass('in');
+        },
+        show: function () {
+            var self = this, $dialog = self.$element;
+            $dialog.css({ top: 0, left: 0, display: 'block', 'z-index': 1050 });
+            self.refreshPosition();
             $.fn.modal.Constructor.prototype.show.call(self, arguments);
         }
     });
