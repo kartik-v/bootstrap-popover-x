@@ -156,7 +156,7 @@ $('#myPopover1').popoverX('toggle')
 ```
 
 #### refreshPosition
-Refresh the position of the popover via javascript.
+Refresh the position of the popover via javascript based on the popover dimensions and placement.
 ```js
 $('#myPopover1').popoverX('refreshPosition')
 ```
