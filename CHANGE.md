@@ -1,19 +1,16 @@
 version 1.0.0
 =============
-Date: 2014-07-01
+Date: 2014-07-15
 
-Initial release. The following features are included in this release:
+Initial release.
 
-1. Convert any HTML input to a star rating control. Recommended input is of `type = number`, which will help fallback to a number input for browsers not supporting JQuery or Javascript.
-2. The plugin automatically converts an input with `type = number` to a star rating control if you set its `class = rating`. All options to the input can be passed as HTML5 `data` attributes.
-3. Involves pure CSS3 styling of the stars. Say goodbye to image sprites or playing with image backgrounds. Offers clean scalable vector icons for consistent display across devices.
-4. Specifically uses Bootstrap 3.x styles & glyphs. Can be combined to work better for Bootstrap styled projects (or input group addons).
-5. Ability to clear values and options for the stars. Control where the clear button element can be shown.
-6. Reset star rating to the initial value when the form is reset.
-7. Ability to control and display caption of the selected stars. Each rated star can have its own caption. Control where the caption element can be shown.
-8. Ability to size the rating control including the stars, caption, and clear button. Five prebuilt size templates are available `xl`, `lg`, `md`, `sm`, and `xs`.
-9. Support for RIGHT TO LEFT (RTL) input. Automatically changes star styling for RTL.
-10. Triggers JQuery events for advanced development. Events currently available are `rating.change`, `rating.clear`, and  `rating.reset`.
-11. Disabled and readonly input star rating support.
-12. Size of the entire plugin is less than 9KB (about 6KB for the minified JS and 3KB for the minified CSS).
-
+- The extended popover can be rendered just like a bootstrap modal dialog with the bootstrap popover styling. Since the plugin extends the bootstrap modal,
+  all features of the [bootstrap modal](http://getbootstrap.com/javascript/#modals) and its methods are also available.
+- Adds a popover footer along with header. Configuration of the HTML content for the popover is much easier, just like a bootstrap modal.
+- Specially styles and spaces out bootstrap buttons added in popover footer. 
+- Add a close icon/button to a popover window.
+- Configure various prebuilt styles/templates. In addition to a default (grey), the bootstrap 3 contextual color styles of `primary`, 
+  `info`, `success`, `danger`, and `warning` can be used.
+- Control popover placements `top`, `bottom`, `left`, or `right` of the target element.
+- Specially style the popover arrow to be consistent for each contextual color and popover placement.
+- Prebuilt CSS styles for controlling appearance and sizes of the popovers
