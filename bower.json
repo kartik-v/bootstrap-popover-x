@@ -7,8 +7,8 @@
     ],
     "description": "Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.",
     "main": [
-        "./css/popover-x.min.css",
-        "./js/popover-x.min.js"
+        "./css/bootstrap-popover-x.min.css",
+        "./js/bootstrap-popover-x.min.js"
     ],
     "keywords": [
         "bootstrap",
