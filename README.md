@@ -22,14 +22,14 @@ The plugin offers these enhanced features:
     - left
     - top
     - bottom
-    - top-left
-    - top-right
-    - bottom-left
-    - bottom-right
-    - left-top
-    - left-bottom
-    - right-top
-    - right-bottom
+    - top top-left
+    - top top-right
+    - bottom bottom-left
+    - bottom bottom-right
+    - left left-top
+    - left left-bottom
+    - right right-top
+    - right right-bottom
 - Specially style the popover arrow to be consistent for each contextual color and popover placement.
 - Prebuilt CSS styles for controlling appearance and sizes of the popovers
 
