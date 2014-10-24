@@ -1,6 +1,24 @@
+version 1.1.0
+=============
+**Date:** 2014-10-24
+
+- enh #2: Add eight additional placement positions. With this release, the popover-x will support these new placement options:
+    - right
+    - left
+    - top
+    - bottom
+    - top-left
+    - top-right
+    - bottom-left
+    - bottom-right
+    - left-top
+    - left-bottom
+    - right-top
+    - right-bottom
+
 version 1.0.0
 =============
-Date: 2014-07-15
+**Date:** 2014-07-15
 
 Initial release.
 

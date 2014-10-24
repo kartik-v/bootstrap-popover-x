@@ -4,6 +4,8 @@ bootstrap-popover-x
 Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more. This plugin is inspired by [BootstrapModalPopover](http://scruffles.github.io/BootstrapModalPopover/) 
 for Bootstrap 2.x. This plugin enhances and simplifies these concepts for Bootstrap 3.x, and incorporates various additional styling options.
 
+> NOTE: The latest version of the plugin v1.1.0 has been released. Refer the [CHANGE LOG](https://github.com/kartik-v/bootstrap-popover-x/blob/master/CHANGE.md) for details.
+
 ## Features  
 
 The plugin offers these enhanced features:
@@ -15,7 +17,19 @@ The plugin offers these enhanced features:
 - Add a close icon/button to a popover window.
 - Configure various prebuilt styles/templates. In addition to a default (grey), the bootstrap 3 contextual color styles of `primary`, 
   `info`, `success`, `danger`, and `warning` can be used.
-- Control popover placements `top`, `bottom`, `left`, or `right` of the target element.
+- Control popover placements with respect to the target element. The plugin supports 12 different placement options:
+    - right
+    - left
+    - top
+    - bottom
+    - top-left
+    - top-right
+    - bottom-left
+    - bottom-right
+    - left-top
+    - left-bottom
+    - right-top
+    - right-bottom
 - Specially style the popover arrow to be consistent for each contextual color and popover placement.
 - Prebuilt CSS styles for controlling appearance and sizes of the popovers
 

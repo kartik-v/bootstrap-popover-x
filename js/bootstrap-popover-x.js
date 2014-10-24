@@ -47,14 +47,38 @@
                 case 'bottom':
                     position = {top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2}
                     break;
+                case 'bottom bottom-left':
+                    position = {top: pos.top + pos.height, left: pos.left}
+                    break;
+                case 'bottom bottom-right':
+                    position = {top: pos.top + pos.height, left: pos.left + pos.width - actualWidth}
+                    break;
                 case 'top':
                     position = {top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2}
+                    break;
+                case 'top top-left':
+                    position = {top: pos.top - actualHeight, left: pos.left}
+                    break;
+                case 'top top-right':
+                    position = {top: pos.top - actualHeight, left: pos.left + pos.width - actualWidth}
                     break;
                 case 'left':
                     position = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth}
                     break;
+                case 'left left-top':
+                    position = {top: pos.top, left: pos.left - actualWidth}
+                    break;
+                case 'left left-bottom':
+                    position = {top: pos.top + pos.height - actualHeight, left: pos.left - actualWidth}
+                    break;
                 case 'right':
                     position = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width}
+                    break;
+                case 'right right-top':
+                    position = {top: pos.top, left: pos.left + pos.width}
+                    break;
+                case 'right right-bottom':
+                    position = {top: pos.top + pos.height - actualHeight, left: pos.left + pos.width}
                     break;
             }
             $dialog
@@ -126,7 +150,7 @@
         $('[data-toggle="popover-x"]').on('keyup', function (e) {
             var $this = $(this),
                 $dialog = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))); //strip for ie7
-            $dialog && e.which == 27 && $dialog.trigger('keyup.target.popoverX') && $dialog.popoverX('hide');
+           $dialog && e.which == 27 && $dialog.trigger('keyup.target.popoverX') && $dialog.popoverX('hide');
         });
     });
 }(window.jQuery);

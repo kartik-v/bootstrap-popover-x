@@ -1,6 +1,6 @@
 /*!
  * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014
- * @version 1.0.0
+ * @version 1.1.0
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -20,6 +20,18 @@
     float: right;
     margin: 7px 9px 7px 7px;
 }
+.popover.top-right > .arrow, .popover.bottom-right > .arrow {
+  left: 90%;
+}
+.popover.top-left  > .arrow, .popover.bottom-left > .arrow {
+  left: 10%;
+}
+.popover.left-top  > .arrow, .popover.right-top > .arrow {
+  top: 10%;
+}
+.popover.left-bottom  > .arrow, .popover.right-bottom > .arrow {
+  top: 90%;
+}
 .popover-default.bottom > .arrow:after {
   border-bottom-color: #f7f7f7;
 }
@@ -37,6 +49,42 @@
 }
 .popover-info.bottom > .arrow:after {
   border-bottom-color: #d9edf7;
+}
+.popover-default.left-top > .arrow:after  {
+    border-left-color: #f7f7f7;
+} 
+.popover-default.right-top > .arrow:after {
+    border-right-color: #f7f7f7;
+}
+.popover-primary.left-top > .arrow:after  {
+    border-left-color: #428bca;
+}
+.popover-primary.right-top > .arrow:after {
+    border-right-color: #428bca;
+}
+.popover-success.left-top > .arrow:after {
+    border-left-color: #dff0d8;
+}
+.popover-success.right-top > .arrow:after {
+    border-right-color: #dff0d8;
+}
+.popover-danger.left-top > .arrow:after {
+    border-left-color: #f2dede;
+}
+.popover-danger.right-top > .arrow:after {
+    border-right-color: #f2dede;
+}
+.popover-warning.left-top > .arrow:after {
+    border-left-color: #fcf8e3;
+}
+.popover-warning.right-top > .arrow:after {
+    border-right-color: #fcf8e3;
+}
+.popover-info.left-top > .arrow:after {
+    border-left-color: #d9edf7;
+}
+.popover-info.right-top > .arrow:after {
+    border-right-color: #d9edf7;
 }
 .popover-default > .popover-title {
   color: #333;
@@ -86,6 +134,14 @@
 }
 .popover.has-footer.top >.arrow:after, .has-footer.popover.top >.arrow:after  {
   border-top-color: #fbfbfb;
+}
+.popover.has-footer.left-bottom >.arrow:after {
+  border-top-color: transparent;
+  border-left-color: #fbfbfb;
+}
+.popover.has-footer.right-bottom >.arrow:after {
+  border-top-color: transparent;
+  border-right-color: #fbfbfb;
 }
 .popover-loading {
     padding: 30px;
