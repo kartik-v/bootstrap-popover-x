@@ -1,6 +1,13 @@
+version 1.2.0
+=============
+**Date:** 08-Nov-2014
+
+1. Set release to stable in composer.json.
+2. Updated CHANGE log to reflect user friendly date time formats.
+
 version 1.1.0
 =============
-**Date:** 2014-10-24
+**Date:** 24-Oct-2014
 
 - enh #2: Add eight additional placement positions. With this release, the popover-x will support these new placement options:
     - right
@@ -18,7 +25,7 @@ version 1.1.0
 
 version 1.0.0
 =============
-**Date:** 2014-07-15
+**Date:** 15-Jul-2014
 
 Initial release.
 
