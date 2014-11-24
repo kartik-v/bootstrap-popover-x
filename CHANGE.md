@@ -1,3 +1,9 @@
+version 1.3.0
+=============
+**Date:** 24-Nov-2014
+
+1. (enh #3): Modal styling fix for eliminating unnecessary modal padding in BS 3.3.1 for popover-x
+
 version 1.2.0
 =============
 **Date:** 08-Nov-2014
