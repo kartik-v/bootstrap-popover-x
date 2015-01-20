@@ -36,7 +36,7 @@
         },
         getPosition: function () {
             var $element = this.$target;
-            return $.extend({}, ($element.position()), {
+            return $.extend({}, ($element.offset()), {
                 width: $element[0].offsetWidth, height: $element[0].offsetHeight
             });
         },
