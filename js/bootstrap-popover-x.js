@@ -14,7 +14,7 @@
         self.options = options;
         self.$element = $(element).on('click.dismiss.popoverX', '[data-dismiss="popover-x"]', $.proxy(self.hide, self));
         self.init();
-    }
+    };
 
     PopoverX.prototype = $.extend({}, $.fn.modal.Constructor.prototype, {
         constructor: PopoverX,
@@ -46,40 +46,40 @@
                 position, pos = self.getPosition();
             switch (placement) {
                 case 'bottom':
-                    position = {top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2}
+                    position = {top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2};
                     break;
                 case 'bottom bottom-left':
-                    position = {top: pos.top + pos.height, left: pos.left}
+                    position = {top: pos.top + pos.height, left: pos.left};
                     break;
                 case 'bottom bottom-right':
-                    position = {top: pos.top + pos.height, left: pos.left + pos.width - actualWidth}
+                    position = {top: pos.top + pos.height, left: pos.left + pos.width - actualWidth};
                     break;
                 case 'top':
-                    position = {top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2}
+                    position = {top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2};
                     break;
                 case 'top top-left':
-                    position = {top: pos.top - actualHeight, left: pos.left}
+                    position = {top: pos.top - actualHeight, left: pos.left};
                     break;
                 case 'top top-right':
-                    position = {top: pos.top - actualHeight, left: pos.left + pos.width - actualWidth}
+                    position = {top: pos.top - actualHeight, left: pos.left + pos.width - actualWidth};
                     break;
                 case 'left':
-                    position = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth}
+                    position = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth};
                     break;
                 case 'left left-top':
-                    position = {top: pos.top, left: pos.left - actualWidth}
+                    position = {top: pos.top, left: pos.left - actualWidth};
                     break;
                 case 'left left-bottom':
-                    position = {top: pos.top + pos.height - actualHeight, left: pos.left - actualWidth}
+                    position = {top: pos.top + pos.height - actualHeight, left: pos.left - actualWidth};
                     break;
                 case 'right':
-                    position = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width}
+                    position = {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width};
                     break;
                 case 'right right-top':
-                    position = {top: pos.top, left: pos.left + pos.width}
+                    position = {top: pos.top, left: pos.left + pos.width};
                     break;
                 case 'right right-bottom':
-                    position = {top: pos.top + pos.height - actualHeight, left: pos.left + pos.width}
+                    position = {top: pos.top + pos.height - actualHeight, left: pos.left + pos.width};
                     break;
             }
             $dialog
@@ -102,22 +102,22 @@
             var $this = $(this);
             var data = $this.data('popover-x');
             var options = $.extend({}, $.fn.popoverX.defaults, $this.data(), typeof option == 'object' && option);
-            if (!options['$target']) {
+            if (!options.$target) {
                 if (data && data.$target) {
-                    options['$target'] = data.$target;
+                    options.$target = data.$target;
                 } else {
-                    options['$target'] = option.$target || $(option.target);
+                    options.$target = option.$target || $(option.target);
                 }
             }
             if (!data) {
-                $this.data('popover-x', (data = new PopoverX(this, options)))
+                $this.data('popover-x', (data = new PopoverX(this, options)));
             }
 
             if (typeof option == 'string') {
-                data[option]()
+                data[option]();
             }
         });
-    }
+    };
 
     $.fn.popoverX.defaults = $.extend({}, $.fn.modal.defaults, {
         placement: 'right',
@@ -132,19 +132,19 @@
             e.preventDefault();
             $dialog.trigger('click.target.popoverX');
             if (option !== 'toggle') {
-                option['$target'] = $this;
+                option.$target = $this;
                 $dialog
                     .popoverX(option)
                     .popoverX('show')
                     .on('hide', function () {
-                        $this.focus()
+                        $this.focus();
                     });
             }
             else {
                 $dialog
                     .popoverX(option)
                     .on('hide', function () {
-                        $this.focus()
+                        $this.focus();
                     });
             }
         });
