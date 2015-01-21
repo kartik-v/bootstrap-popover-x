@@ -1,6 +1,6 @@
 /*!
  * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014
- * @version 1.3.0
+ * @version 1.4.0
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -22,6 +22,7 @@
             var self = this;
             self.$body = $(document.body);
             self.$target = self.options.$target;
+            self.useOffsetForPos = self.options['useOffsetForPos'] == undefined ? false : self.options['useOffsetForPos'];
             if (self.$element.find('.popover-footer').length) {
                 self.$element
                     .removeClass('has-footer')
@@ -35,10 +36,9 @@
 
         },
         getPosition: function () {
-            var $element = this.$target;
-            return $.extend({}, ($element.offset()), {
-                width: $element[0].offsetWidth, height: $element[0].offsetHeight
-            });
+            var self = this, $element = self.$target,
+                pos = self.useOffsetForPos ? $element.offset() : $element.position();
+            return $.extend({}, pos, {width: $element[0].offsetWidth, height: $element[0].offsetHeight});
         },
         refreshPosition: function () {
             var self = this, $dialog = self.$element, placement = self.options.placement,
@@ -89,7 +89,7 @@
         },
         show: function () {
             var self = this, $dialog = self.$element;
-            $dialog.css({ top: 0, left: 0, display: 'block', 'z-index': 1050});
+            $dialog.css({top: 0, left: 0, display: 'block', 'z-index': 1050});
             self.refreshPosition();
             $.fn.modal.Constructor.prototype.show.call(self, arguments);
             $dialog.css({'padding': 0});
@@ -128,7 +128,8 @@
         $("[data-toggle='popover-x']").on('click', function (e) {
             var $this = $(this), href = $this.attr('href'),
                 $dialog = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))), //strip for ie7
-                option = $dialog.data('popover-x') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $dialog.data(), $this.data());
+                option = $dialog.data('popover-x') ? 'toggle' : $.extend({remote: !/#/.test(href) && href},
+                    $dialog.data(), $this.data());
             e.preventDefault();
             $dialog.trigger('click.target.popoverX');
             if (option !== 'toggle') {
@@ -152,7 +153,7 @@
         $('[data-toggle="popover-x"]').on('keyup', function (e) {
             var $this = $(this),
                 $dialog = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))); //strip for ie7
-           $dialog && e.which == 27 && $dialog.trigger('keyup.target.popoverX') && $dialog.popoverX('hide');
+            $dialog && e.which == 27 && $dialog.trigger('keyup.target.popoverX') && $dialog.popoverX('hide');
         });
     });
 }(window.jQuery);

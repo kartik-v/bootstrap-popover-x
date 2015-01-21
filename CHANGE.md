@@ -1,3 +1,10 @@
+version 1.4.0
+=============
+**Date:** 21-Jan-2015
+
+1. (enh #6): Add new `useOffsetForPos` property to allow using offset instead of position.
+2. (enh #7): Lint changes & code formatting updates.
+
 version 1.3.0
 =============
 **Date:** 24-Nov-2014
