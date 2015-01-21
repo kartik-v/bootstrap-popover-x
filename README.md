@@ -126,7 +126,7 @@ _boolean_, when set to `true`, it closes the popover when escape key is pressed.
 _boolean_, shows the popover when initialized. Defaults to `true`.
 
 #### useOffsetForPos
-_boolean_, use the offset method instead position method to get the popover position. Defaults to `false`.
+_boolean_, use the offset method instead of position method to get the popover position. Defaults to `false`.
 
 ### Plugin Events
 The plugin supports these events:
