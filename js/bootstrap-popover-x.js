@@ -7,8 +7,8 @@
  * For more JQuery/Bootstrap plugins and demos visit http://plugins.krajee.com
  * For more Yii related demos visit http://demos.krajee.com
  */
-!function ($) {
-
+(function ($) {
+    "use strict";
     var PopoverX = function (element, options) {
         var self = this;
         self.options = options;
@@ -22,11 +22,9 @@
             var self = this;
             self.$body = $(document.body);
             self.$target = self.options.$target;
-            self.useOffsetForPos = self.options['useOffsetForPos'] == undefined ? false : self.options['useOffsetForPos'];
+            self.useOffsetForPos = self.options.useOffsetForPos === undefined ? false : self.options.useOffsetForPos;
             if (self.$element.find('.popover-footer').length) {
-                self.$element
-                    .removeClass('has-footer')
-                    .addClass('has-footer');
+                self.$element.removeClass('has-footer').addClass('has-footer');
             }
             if (self.options.remote) {
                 self.$element.find('.popover-content').load(self.options.remote, function () {
@@ -81,6 +79,8 @@
                 case 'right right-bottom':
                     position = {top: pos.top + pos.height - actualHeight, left: pos.left + pos.width};
                     break;
+                default:
+                    throw "Invalid popover placement '" + placement + "'.";
             }
             $dialog
                 .css(position)
@@ -101,7 +101,7 @@
         return self.each(function () {
             var $this = $(this);
             var data = $this.data('popover-x');
-            var options = $.extend({}, $.fn.popoverX.defaults, $this.data(), typeof option == 'object' && option);
+            var options = $.extend({}, $.fn.popoverX.defaults, $this.data(), typeof option === 'object' && option);
             if (!options.$target) {
                 if (data && data.$target) {
                     options.$target = data.$target;
@@ -113,7 +113,7 @@
                 $this.data('popover-x', (data = new PopoverX(this, options)));
             }
 
-            if (typeof option == 'string') {
+            if (typeof option === 'string') {
                 data[option]();
             }
         });
@@ -151,9 +151,12 @@
         });
 
         $('[data-toggle="popover-x"]').on('keyup', function (e) {
-            var $this = $(this),
+            var $this = $(this), href = $this.attr('href'),
                 $dialog = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))); //strip for ie7
-            $dialog && e.which == 27 && $dialog.trigger('keyup.target.popoverX') && $dialog.popoverX('hide');
+            if ($dialog && e.which === 27) {
+                $dialog.trigger('keyup.target.popoverX');
+                $dialog.popoverX('hide');
+            }
         });
     });
-}(window.jQuery);
+})(window.jQuery);
