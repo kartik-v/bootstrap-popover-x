@@ -159,4 +159,6 @@
             }
         });
     });
+    
+    $.fn.popoverX.Constructor = PopoverX;
 })(window.jQuery);
