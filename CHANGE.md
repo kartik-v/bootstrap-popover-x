@@ -1,10 +1,11 @@
 version 1.4.0
 =============
-**Date:** 31-Jan-2015
+**Date:** 17-Feb-2015
 
 1. (enh #6): Add new `useOffsetForPos` property to allow using offset instead of position.
 2. (enh #7): Lint changes & code formatting updates for JS & CSS.
 3. (enh #8): Implement reusable constructor for extending plugin if needed.
+4. Update copyright year.
 
 version 1.3.0
 =============

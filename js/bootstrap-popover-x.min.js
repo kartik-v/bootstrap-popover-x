@@ -1,5 +1,5 @@
 /*!
- * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014
+ * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2015
  * @version 1.4.0
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.

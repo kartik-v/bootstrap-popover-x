@@ -1,5 +1,5 @@
 /*!
- * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014
+ * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2015
  * @version 1.4.0
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
@@ -123,6 +123,8 @@
         placement: 'right',
         keyboard: true
     });
+    
+    $.fn.popoverX.Constructor = PopoverX;
 
     $(document).on('ready', function () {
         $("[data-toggle='popover-x']").on('click', function (e) {
@@ -159,6 +161,4 @@
             }
         });
     });
-    
-    $.fn.popoverX.Constructor = PopoverX;
 })(window.jQuery);
