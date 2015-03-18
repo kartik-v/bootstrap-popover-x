@@ -1,6 +1,6 @@
 {
     "name": "bootstrap-popover-x",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "homepage": "https://github.com/kartik-v/bootstrap-popover-x",
     "authors": [
         "Kartik Visweswaran <kartikv2@gmail.com>"
@@ -20,7 +20,7 @@
     ],
     "dependencies": {
         "jquery": ">= 1.9.0",
-        "bootstrap": ">= 3.0.0"
+        "bootstrap": ">= 3.3.4"
     },
     "license": "BSD-3",
     "ignore": [

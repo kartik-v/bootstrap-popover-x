@@ -1,3 +1,10 @@
+version 1.4.1
+=============
+**Date:** 18-Mar-2015
+
+1. (enh #9): Set document ready to be compatible with jquery.turbolinks.
+2. (enh #10): Refactor code for bootstrap v3.3.4.
+
 version 1.4.0
 =============
 **Date:** 17-Feb-2015

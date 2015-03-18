@@ -1,6 +1,6 @@
 /*!
  * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2015
- * @version 1.4.0
+ * @version 1.4.1
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -12,25 +12,26 @@
     var PopoverX = function (element, options) {
         var self = this;
         self.options = options;
-        self.$element = $(element).on('click.dismiss.popoverX', '[data-dismiss="popover-x"]', $.proxy(self.hide, self));
+        self.$dialog = $(element);
         self.init();
     };
 
     PopoverX.prototype = $.extend({}, $.fn.modal.Constructor.prototype, {
         constructor: PopoverX,
         init: function () {
-            var self = this;
+            var self = this, $dialog = self.$dialog;
             self.$body = $(document.body);
             self.$target = self.options.$target;
             self.useOffsetForPos = self.options.useOffsetForPos === undefined ? false : self.options.useOffsetForPos;
-            if (self.$element.find('.popover-footer').length) {
-                self.$element.removeClass('has-footer').addClass('has-footer');
+            if ($dialog.find('.popover-footer').length) {
+                $dialog.removeClass('has-footer').addClass('has-footer');
             }
             if (self.options.remote) {
-                self.$element.find('.popover-content').load(self.options.remote, function () {
-                    self.$element.trigger('load.complete.popoverX');
+                $dialog.find('.popover-content').load(self.options.remote, function () {
+                    $dialog.trigger('load.complete.popoverX');
                 });
             }
+            $dialog.on('click.dismiss.popoverX', '[data-dismiss="popover-x"]', $.proxy(self.hide, self));
 
         },
         getPosition: function () {
@@ -39,7 +40,7 @@
             return $.extend({}, pos, {width: $element[0].offsetWidth, height: $element[0].offsetHeight});
         },
         refreshPosition: function () {
-            var self = this, $dialog = self.$element, placement = self.options.placement,
+            var self = this, $dialog = self.$dialog, placement = self.options.placement,
                 actualWidth = $dialog[0].offsetWidth, actualHeight = $dialog[0].offsetHeight,
                 position, pos = self.getPosition();
             switch (placement) {
@@ -88,7 +89,7 @@
                 .addClass('in');
         },
         show: function () {
-            var self = this, $dialog = self.$element;
+            var self = this, $dialog = self.$dialog;
             $dialog.css({top: 0, left: 0, display: 'block', 'z-index': 1050});
             self.refreshPosition();
             $.fn.modal.Constructor.prototype.show.call(self, arguments);
@@ -126,7 +127,7 @@
     
     $.fn.popoverX.Constructor = PopoverX;
 
-    $(document).on('ready', function () {
+    $(document).ready(function () {
         $("[data-toggle='popover-x']").on('click', function (e) {
             var $this = $(this), href = $this.attr('href'),
                 $dialog = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))), //strip for ie7
