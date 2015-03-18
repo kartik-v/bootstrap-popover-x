@@ -1,6 +1,6 @@
 /*!
  * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2015
- * @version 1.4.0
+ * @version 1.4.1
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -12,26 +12,27 @@
     var PopoverX = function (element, options) {
         var self = this;
         self.options = options;
-        self.$element = $(element).on('click.dismiss.popoverX', '[data-dismiss="popover-x"]', $.proxy(self.hide, self));
+        self.$element = $(element);
+        self.$dialog = self.$element;
         self.init();
     };
 
     PopoverX.prototype = $.extend({}, $.fn.modal.Constructor.prototype, {
         constructor: PopoverX,
         init: function () {
-            var self = this;
+            var self = this, $dialog = self.$element;
             self.$body = $(document.body);
             self.$target = self.options.$target;
             self.useOffsetForPos = self.options.useOffsetForPos === undefined ? false : self.options.useOffsetForPos;
-            if (self.$element.find('.popover-footer').length) {
-                self.$element.removeClass('has-footer').addClass('has-footer');
+            if ($dialog.find('.popover-footer').length) {
+                $dialog.removeClass('has-footer').addClass('has-footer');
             }
             if (self.options.remote) {
-                self.$element.find('.popover-content').load(self.options.remote, function () {
-                    self.$element.trigger('load.complete.popoverX');
+                $dialog.find('.popover-content').load(self.options.remote, function () {
+                    $dialog.trigger('load.complete.popoverX');
                 });
             }
-
+            $dialog.on('click.dismiss.popoverX', '[data-dismiss="popover-x"]', $.proxy(self.hide, self));
         },
         getPosition: function () {
             var self = this, $element = self.$target,
@@ -126,7 +127,7 @@
     
     $.fn.popoverX.Constructor = PopoverX;
 
-    $(document).on('ready', function () {
+    $(document).ready(function () {
         $("[data-toggle='popover-x']").on('click', function (e) {
             var $this = $(this), href = $this.attr('href'),
                 $dialog = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))), //strip for ie7
