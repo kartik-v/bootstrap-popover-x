@@ -4,6 +4,7 @@ version 1.4.1
 
 1. (enh #9): Set document ready to be compatible with jquery.turbolinks.
 2. (enh #10): Refactor code for bootstrap v3.3.4.
+3. (enh #11): Auto-close other popovers with new property `closeOtherPopovers`.
 
 version 1.4.0
 =============

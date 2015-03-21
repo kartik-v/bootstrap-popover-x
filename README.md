@@ -122,6 +122,9 @@ Defaults to `right`.
 #### keyboard
 _boolean_, when set to `true`, it closes the popover when escape key is pressed. Defaults to `true`.
 
+#### closeOtherPopovers
+_boolean_, when set to `true`, it closes all other popovers on the page after the current popover is shown. Defaults to `true`.
+
 #### show
 _boolean_, shows the popover when initialized. Defaults to `true`.
 
