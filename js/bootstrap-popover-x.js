@@ -139,7 +139,7 @@
     $.fn.popoverX.Constructor = PopoverX;
 
     $(document).ready(function () {
-        $("[data-toggle='popover-x']").on('touchstart click', function (e) {
+        $("[data-toggle='popover-x']").on('click touchstart', function (e) {
             var $this = $(this), href = $this.attr('href'),
                 $dialog = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))), //strip for ie7
                 option = $dialog.data('popover-x') ? 'toggle' : $.extend({remote: !/#/.test(href) && href},
