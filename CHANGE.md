@@ -1,9 +1,3 @@
-version 1.4.2
-=============
-**Date:** 12-Apr-2015
-
-1. (enh #12, #13): Enable click for touch enabled devices as well.
-
 version 1.4.1
 =============
 **Date:** 18-Mar-2015
