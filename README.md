@@ -1,6 +1,12 @@
 bootstrap-popover-x
 =====================
 
+[![BOWER version](https://badge-me.herokuapp.com/api/bower/kartik-v/bootstrap-popover-x.png)](http://badges.enytc.com/for/bower/kartik-v/bootstrap-popover-x)
+[![Latest Stable Version](https://poser.pugx.org/kartik-v/bootstrap-popover-x/v/stable)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
+[![License](https://poser.pugx.org/kartik-v/bootstrap-popover-x/license)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
+[![Packagist Downloads](https://poser.pugx.org/kartik-v/bootstrap-popover-x/downloads)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
+[![Monthly Downloads](https://poser.pugx.org/kartik-v/bootstrap-popover-x/d/monthly)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
+
 Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more. This plugin is inspired by [BootstrapModalPopover](http://scruffles.github.io/BootstrapModalPopover/) 
 for Bootstrap 2.x. This plugin enhances and simplifies these concepts for Bootstrap 3.x, and incorporates various additional styling options.
 
