@@ -1,7 +1,7 @@
 bootstrap-popover-x
 =====================
 
-[![BOWER version](https://badge-me.herokuapp.com/api/bower/kartik-v/bootstrap-popover-x.png)](http://badges.enytc.com/for/bower/kartik-v/bootstrap-popover-x)
+[![Bower version](https://badge.fury.io/bo/bootstrap-popover-x.svg)](http://badge.fury.io/bo/bootstrap-popover-x)
 [![Latest Stable Version](https://poser.pugx.org/kartik-v/bootstrap-popover-x/v/stable)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
 [![License](https://poser.pugx.org/kartik-v/bootstrap-popover-x/license)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
 [![Packagist Downloads](https://poser.pugx.org/kartik-v/bootstrap-popover-x/downloads)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
