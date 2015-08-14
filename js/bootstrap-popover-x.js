@@ -139,7 +139,7 @@
     $.fn.popoverX.Constructor = PopoverX;
 
     $(document).ready(function () {
-        $("[data-toggle='popover-x']").on('click', function (e) {
+        $(document).on('click', '[data-toggle="popover-x"]', function (e) {
             var $this = $(this), href = $this.attr('href'),
                 $dialog = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))), //strip for ie7
                 option = $dialog.data('popover-x') ? 'toggle' : $.extend({remote: !/#/.test(href) && href},
@@ -164,7 +164,7 @@
             }
         });
 
-        $('[data-toggle="popover-x"]').on('keyup', function (e) {
+        $(document).on('keyup', '[data-toggle="popover-x"]', function (e) {
             var $this = $(this), href = $this.attr('href'),
                 $dialog = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))); //strip for ie7
             if ($dialog && e.which === 27) {
