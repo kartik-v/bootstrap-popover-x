@@ -1,3 +1,20 @@
+version 1.4.1
+=============
+**Date:** 18-Mar-2015
+
+1. (enh #9): Set document ready to be compatible with jquery.turbolinks.
+2. (enh #10): Refactor code for bootstrap v3.3.4.
+3. (enh #11): Auto-close other popovers with new property `closeOtherPopovers`.
+
+version 1.4.0
+=============
+**Date:** 17-Feb-2015
+
+1. (enh #6): Add new `useOffsetForPos` property to allow using offset instead of position.
+2. (enh #7): Lint changes & code formatting updates for JS & CSS.
+3. (enh #8): Implement reusable constructor for extending plugin if needed.
+4. Update copyright year.
+
 version 1.3.0
 =============
 **Date:** 24-Nov-2014
