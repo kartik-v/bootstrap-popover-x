@@ -39,7 +39,7 @@ The plugin offers these enhanced features:
 - Specially style the popover arrow to be consistent for each contextual color and popover placement.
 - Prebuilt CSS styles for controlling appearance and sizes of the popovers
 
-## Demo
+## Documentation and Demo
 
 View the [plugin documentation](http://plugins.krajee.com/popover-x) and [plugin demos](http://plugins.krajee.com/popover-x/demo) at Krajee JQuery plugins. 
 
@@ -113,90 +113,6 @@ Alternatively, you can initialize the popover manually on your page via javascri
 
 ```js
 $('#myPopover1').popoverX(options);
-```
-
-## Documentation
-
-### Plugin Options
-
-The plugin supports all options that are supported by the [bootstrap modal](http://getbootstrap.com/javascript/#modals). The following options are important for the `bootstrap-popover-x` plugin:
-
-#### placement
-_string_, the positioning of the popover with respect to the initialized element/button. It can be one of `left`, `right`, `top`, `bottom`. 
-Defaults to `right`.
-
-#### keyboard
-_boolean_, when set to `true`, it closes the popover when escape key is pressed. Defaults to `true`.
-
-#### closeOtherPopovers
-_boolean_, when set to `true`, it closes all other popovers on the page after the current popover is shown. Defaults to `true`.
-
-#### show
-_boolean_, shows the popover when initialized. Defaults to `true`.
-
-#### useOffsetForPos
-_boolean_, use the offset method instead of position method to get the popover position. Defaults to `false`.
-
-### Plugin Events
-The plugin supports these events:
-
-#### click.target.popoverX
-This event is fired when the popover target button is clicked to open the popover dialog.
-
-#### load.complete.popoverX
-This event is fired when the popover has loaded content using the remote option.
-
-#### keyup.target.popoverX
-This event is fired when the escape key is pressed to hide the popover.
-
-#### show.bs.modal
-This event fires immediately when the `show` instance method is called. If caused by a click, 
-the clicked element is available as the `relatedTarget` property of the event.
-
-#### shown.bs.modal
-This event is fired when the popover has been made visible to the user (will wait for CSS transitions to complete). 
-If caused by a click, the clicked element is available as the `relatedTarget` property of the event.
-
-#### hide.bs.modal
-This event is fired immediately when the `hide` instance method has been called.
-
-#### hidden.bs.modal
-This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete).
-
-**Example:**
-```js
-$('#myPopover1').on('hidden.bs.modal', function (e) {
-    // do something...
-});
-```
-
-### Plugin Methods
-The plugin supports these methods:
-
-#### toggle
-Manually toggles a popover. Returns to the caller before the popover has actually been shown or hidden 
-(i.e. before the `shown.bs.modal` or `hidden.bs.modal` event occurs).
-
-```js
-$('#myPopover1').popoverX('toggle')
-```
-
-#### refreshPosition
-Refresh the position of the popover via javascript based on the popover dimensions and placement.
-```js
-$('#myPopover1').popoverX('refreshPosition')
-```
-
-#### show
-Manually opens a popover. Returns to the caller before the modal has actually been shown (i.e. before the `shown.bs.modal` event occurs).
-```js
-$('#myPopover1').popoverX('show')
-```
-
-#### hide
-Manually hides a popover. Returns to the caller before the modal has actually been hidden (i.e. before the `hidden.bs.modal` event occurs).
-```js
-$('#myPopover1').popoverX('hide')
 ```
 
 ## License
