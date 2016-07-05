@@ -7,7 +7,19 @@
  * For more JQuery/Bootstrap plugins and demos visit http://plugins.krajee.com
  * For more Yii related demos visit http://demos.krajee.com
  */
-(function ($) {
+(function (factory) {
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        // Register as an anonymous AMD module:
+        define([
+            'jquery',
+            'bootstrap'
+        ], factory);
+    } else {
+        // Browser globals:
+        factory(window.jQuery);
+    }
+}(function ($) {
     "use strict";
     var PopoverX = function (element, options) {
         var self = this;
@@ -135,7 +147,7 @@
         keyboard: true,
         closeOtherPopovers: true
     });
-    
+
     $.fn.popoverX.Constructor = PopoverX;
 
     $(document).ready(function () {
@@ -173,4 +185,4 @@
             }
         });
     });
-})(window.jQuery);
+}));
