@@ -1,16 +1,9 @@
 bootstrap-popover-x
 =====================
 
-[![Bower version](https://badge.fury.io/bo/bootstrap-popover-x.svg)](http://badge.fury.io/bo/bootstrap-popover-x)
-[![Latest Stable Version](https://poser.pugx.org/kartik-v/bootstrap-popover-x/v/stable)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
-[![License](https://poser.pugx.org/kartik-v/bootstrap-popover-x/license)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
-[![Packagist Downloads](https://poser.pugx.org/kartik-v/bootstrap-popover-x/downloads)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
-[![Monthly Downloads](https://poser.pugx.org/kartik-v/bootstrap-popover-x/d/monthly)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
+Bootstrap Popover Extended - Popover with modal behavior, multiple placements, automatic placements, ability to load content dynamically, and more other styling enhancements. The plugin enhances the styles for Bootstrap 3.x, and incorporates various additional styling options. This plugin was originally inspired by [BootstrapModalPopover](http://scruffles.github.io/BootstrapModalPopover/) for Bootstrap 2.x, and has been significantly enhanced for Bootstrap 3.x and includes various new features.
 
-Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more. This plugin is inspired by [BootstrapModalPopover](http://scruffles.github.io/BootstrapModalPopover/) 
-for Bootstrap 2.x. This plugin enhances and simplifies these concepts for Bootstrap 3.x, and incorporates various additional styling options.
-
-> NOTE: The latest version of the plugin v1.4.1 has been released. Refer the [CHANGE LOG](https://github.com/kartik-v/bootstrap-popover-x/blob/master/CHANGE.md) for details.
+> NOTE: The latest version of the plugin v1.4.2 has been released. Refer the [CHANGE LOG](https://github.com/kartik-v/bootstrap-popover-x/blob/master/CHANGE.md) for details.
 
 ## Features  
 
@@ -36,10 +29,21 @@ The plugin offers these enhanced features:
     - left left-bottom
     - right right-top
     - right right-bottom
+    - auto
+    - auto-top
+    - auto-right
+    - auto-bottom
+    - auto-left
+    - horizontal
+    - vertical
 - Specially style the popover arrow to be consistent for each contextual color and popover placement.
 - Prebuilt CSS styles for controlling appearance and sizes of the popovers
+- Ability to initialize and set popovers via javascript using the <code>PopoverButton</code> plugin.
+- Auto placement functionality that allows the popover to be placed automatically based on scroll and device screen dimensions. Various automatic placement options are available like `auto`, `auto-top`, `auto-right`, `auto-bottom`, `auto-left`, `horizontal`, and `vertical`.
+- Allow scrolling of the page with popover displayed (unlike bootstrap modal).
+- Styling enhancements for popover to not overlay but stay behind the bootstrap navbar.
 
-## Documentation and Demo
+## Demo
 
 View the [plugin documentation](http://plugins.krajee.com/popover-x) and [plugin demos](http://plugins.krajee.com/popover-x/demo) at Krajee JQuery plugins. 
 
@@ -78,10 +82,10 @@ You can also manually install the plugin easily to your project. Just download t
 You must first load the following assets in your header. 
 
 ```html
-<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <link href="path/to/css/bootstrap-popover-x.min.css" media="all" rel="stylesheet" type="text/css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.js"></script>
 <script src="path/to/js/bootstrap-popover-x.min.js" type="text/javascript"></script>
 ```
 
@@ -109,11 +113,29 @@ to target a specific popover to toggle.
 
 ### Option 2: Via javascript
 
-Alternatively, you can initialize the popover manually on your page via javascript.
+Alternatively, you can initialize the popover manually on your page via javascript using the `PopoverButton` plugin. This feature is typically useful when  dynamically rendering content and dynamically enabling an element to trigger the popover.
 
 ```js
-$('#myPopover1').popoverX(options);
+<-- for example with the following button markup and using the same popover content markup above -->
+<button id="#btn1" class="btn btn-primary btn-lg">Top</button>
+<script>
+$(document).on('ready', function() {
+    // initialize popover on click of `#btn1`
+    $('#btn1').popoverButton({
+        target: '#myPopover1'
+    });
+    // or alternatively initialize popover on hover of `#btn1`
+    $('#btn1').popoverButton({
+        target: '#myPopover1',
+        trigger: 'hover focus'
+    });
+});
+</script>
 ```
+
+## Documentation and Demo
+
+View the [plugin documentation](http://plugins.krajee.com/popover-x) and [plugin demos](http://plugins.krajee.com/popover-x/demo) at Krajee JQuery plugins. 
 
 ## License
 

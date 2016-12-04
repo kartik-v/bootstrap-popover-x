@@ -1,13 +1,26 @@
-version 1.4.1
-=============
+Change Log: `bootstrap-popover-x`
+=================================
+
+## Version 1.4.2
+
+**Date:** 04-Dec-2016
+
+1. (enh #21): Add ability to support auto placement with various new auto placement settings.
+2. (enh #22): Add support for require.js.
+3. (enh #24): Enhance ability to register plugin via javascript.
+4. (enh #25): Add ability to set `trigger` events other than click for popover button.
+5. (enh #26): Allow scrolling of the page body after popover is shown.
+6. Add github contribution templates.
+
+## Version 1.4.1
+
 **Date:** 18-Mar-2015
 
 1. (enh #9): Set document ready to be compatible with jquery.turbolinks.
 2. (enh #10): Refactor code for bootstrap v3.3.4.
-3. (enh #11): Auto-close other popovers with new property `closeOtherPopovers`.
 
-version 1.4.0
-=============
+## Version 1.4.0
+
 **Date:** 17-Feb-2015
 
 1. (enh #6): Add new `useOffsetForPos` property to allow using offset instead of position.
@@ -15,21 +28,21 @@ version 1.4.0
 3. (enh #8): Implement reusable constructor for extending plugin if needed.
 4. Update copyright year.
 
-version 1.3.0
-=============
+## Version 1.3.0
+
 **Date:** 24-Nov-2014
 
 1. (enh #3): Modal styling fix for eliminating unnecessary modal padding in BS 3.3.1 for popover-x
 
-version 1.2.0
-=============
+## Version 1.2.0
+
 **Date:** 08-Nov-2014
 
 1. Set release to stable in composer.json.
 2. Updated CHANGE log to reflect user friendly date time formats.
 
-version 1.1.0
-=============
+## Version 1.1.0
+
 **Date:** 24-Oct-2014
 
 - enh #2: Add eight additional placement positions. With this release, the popover-x will support these new placement options:
@@ -46,8 +59,8 @@ version 1.1.0
     - right right-top
     - right right-bottom
 
-version 1.0.0
-=============
+## Version 1.0.0
+
 **Date:** 15-Jul-2014
 
 Initial release.
