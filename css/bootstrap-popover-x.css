@@ -1,6 +1,6 @@
 /*!
  * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2016
- * @version 1.4.2
+ * @version 1.4.3
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -191,6 +191,7 @@
     overflow-y: auto;
 }
 
-.popover-x-body .navbar { // popover must be behind bootstrap navbar when scrolled
+ /* popover must be behind bootstrap navbar when scrolled */
+.popover-x-body .navbar {
     z-index:1051;
 }

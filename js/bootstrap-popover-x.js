@@ -1,6 +1,6 @@
 /*!
  * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2016
- * @version 1.4.2
+ * @version 1.4.3
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -297,6 +297,7 @@
         },
         hide: function () {
             var self = this, $dialog = self.$element;
+            self.$body.removeClass('popover-x-body');
             $.fn.modal.Constructor.prototype.hide.apply(self, arguments);
             $dialog.insertBefore(self.$marker);
         },
@@ -306,6 +307,7 @@
             $.fn.modal.Constructor.prototype.show.apply(self, arguments);
             self.$body.css({'padding': 0});
             $dialog.css({'padding': 0});
+            addCss(self.$body, 'popover-x-body');
             self.refreshPosition();
             if (!skipValidation) {
                 self.validateOpenPopovers();
