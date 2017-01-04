@@ -149,10 +149,7 @@
             }
             addCss(self.$body, 'popover-x-body');
             self.$target = self.options.$target;
-            self.$marker = $(document.createElement('div', {
-                style: 'display:none',
-                class: 'popover-x-marker'
-            })).insertAfter($dialog);
+            self.$marker = $(document.createElement('div')).addClass('popover-x-marker').insertAfter($dialog).hide();
             if ($dialog.find('.popover-footer').length) {
                 addCss($dialog, 'has-footer');
             }
@@ -338,6 +335,7 @@
         return self.each(function () {
             var $this = $(this), data = $this.data('popover-x'),
                 options = $.extend({}, $.fn.popoverX.defaults, $this.data(), typeof option === 'object' && option);
+            console.log('data', data, 'option', option, 'options', options);
             if (!options.$target) {
                 if (data && data.$target) {
                     options.$target = data.$target;

@@ -3,9 +3,10 @@ Change Log: `bootstrap-popover-x`
 
 ## Version 1.4.3
 
-**Date:** 23-Dec-2016
+**Date:** 04-Jan-2017
 
 1. More correct styles for popover-x positioning behind BS navbar.
+2. (bug #28): Correct popover marker div rendering.
 
 ## Version 1.4.2
 
