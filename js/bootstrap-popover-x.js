@@ -1,5 +1,5 @@
 /*!
- * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2016
+ * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
  * @version 1.4.3
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
@@ -335,7 +335,6 @@
         return self.each(function () {
             var $this = $(this), data = $this.data('popover-x'),
                 options = $.extend({}, $.fn.popoverX.defaults, $this.data(), typeof option === 'object' && option);
-            console.log('data', data, 'option', option, 'options', options);
             if (!options.$target) {
                 if (data && data.$target) {
                     options.$target = data.$target;
