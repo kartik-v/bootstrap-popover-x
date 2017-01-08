@@ -147,7 +147,6 @@
             if (!self.$body || !self.$body.length) {
                 self.$body = $(document.body);
             }
-            addCss(self.$body, 'popover-x-body');
             self.$target = self.options.$target;
             self.$marker = $(document.createElement('div')).addClass('popover-x-marker').insertAfter($dialog).hide();
             if ($dialog.find('.popover-footer').length) {
