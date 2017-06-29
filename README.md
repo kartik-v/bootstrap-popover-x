@@ -3,7 +3,7 @@ bootstrap-popover-x
 
 Bootstrap Popover Extended - Popover with modal behavior, multiple placements, automatic placements, ability to load content dynamically, and more other styling enhancements. The plugin enhances the styles for Bootstrap 3.x, and incorporates various additional styling options. This plugin was originally inspired by [BootstrapModalPopover](http://scruffles.github.io/BootstrapModalPopover/) for Bootstrap 2.x, and has been significantly enhanced for Bootstrap 3.x and includes various new features.
 
-> NOTE: The latest version of the plugin v1.4.3 has been released. Refer the [CHANGE LOG](https://github.com/kartik-v/bootstrap-popover-x/blob/master/CHANGE.md) for details.
+> NOTE: The latest version of the plugin v1.4.4 has been released. Refer the [CHANGE LOG](https://github.com/kartik-v/bootstrap-popover-x/blob/master/CHANGE.md) for details.
 
 ## Features  
 

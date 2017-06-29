@@ -1,10 +1,11 @@
 Change Log: `bootstrap-popover-x`
 =================================
 
-## Version 1.4.4
+## Version 1.4.4 (_under development_)
 
 **Date:** 29-Jun-2017
 
+- Implement `package.json` for npm update.
 - (enh #29): Add `img` folder and indicator for the `popover-loading` css style.
 
 ## Version 1.4.3
