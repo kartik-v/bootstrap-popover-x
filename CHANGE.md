@@ -1,52 +1,58 @@
 Change Log: `bootstrap-popover-x`
 =================================
 
+## Version 1.4.4
+
+**Date:** 29-Jun-2017
+
+- (enh #29): Add `img` folder and indicator for the `popover-loading` css style.
+
 ## Version 1.4.3
 
 **Date:** 04-Jan-2017
 
-1. More correct styles for popover-x positioning behind BS navbar.
-2. (bug #28): Correct popover marker div rendering.
+- (bug #28): Correct popover marker div rendering.
+- More correct styles for popover-x positioning behind BS navbar.
 
 ## Version 1.4.2
 
 **Date:** 04-Dec-2016
 
-1. (enh #21): Add ability to support auto placement with various new auto placement settings.
-2. (enh #22): Add support for require.js.
-3. (enh #24): Enhance ability to register plugin via javascript.
-4. (enh #25): Add ability to set `trigger` events other than click for popover button.
-5. (enh #26): Allow scrolling of the page body after popover is shown.
-6. Add github contribution templates.
+- Add github contribution templates.
+- (enh #26): Allow scrolling of the page body after popover is shown.
+- (enh #25): Add ability to set `trigger` events other than click for popover button.
+- (enh #24): Enhance ability to register plugin via javascript.
+- (enh #22): Add support for require.js.
+- (enh #21): Add ability to support auto placement with various new auto placement settings.
 
 ## Version 1.4.1
 
 **Date:** 18-Mar-2015
 
-1. (enh #9): Set document ready to be compatible with jquery.turbolinks.
-2. (enh #10): Refactor code for bootstrap v3.3.4.
+- (enh #10): Refactor code for bootstrap v3.3.4.
+- (enh #9): Set document ready to be compatible with jquery.turbolinks.
 
 ## Version 1.4.0
 
 **Date:** 17-Feb-2015
 
-1. (enh #6): Add new `useOffsetForPos` property to allow using offset instead of position.
-2. (enh #7): Lint changes & code formatting updates for JS & CSS.
-3. (enh #8): Implement reusable constructor for extending plugin if needed.
-4. Update copyright year.
+- Update copyright year.
+- (enh #8): Implement reusable constructor for extending plugin if needed.
+- (enh #7): Lint changes & code formatting updates for JS & CSS.
+- (enh #6): Add new `useOffsetForPos` property to allow using offset instead of position.
 
 ## Version 1.3.0
 
 **Date:** 24-Nov-2014
 
-1. (enh #3): Modal styling fix for eliminating unnecessary modal padding in BS 3.3.1 for popover-x
+- (enh #3): Modal styling fix for eliminating unnecessary modal padding in BS 3.3.1 for popover-x
 
 ## Version 1.2.0
 
 **Date:** 08-Nov-2014
 
-1. Set release to stable in composer.json.
-2. Updated CHANGE log to reflect user friendly date time formats.
+- Set release to stable in composer.json.
+- Updated CHANGE log to reflect user friendly date time formats.
 
 ## Version 1.1.0
 
