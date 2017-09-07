@@ -6,6 +6,9 @@ Change Log: `bootstrap-popover-x`
 **Date:** 07-Sep-2017
 
 - (enh #31): Code enhancements for jQuery 3.x.
+- (enh #30): More intuitive screen placement depending on media size. New PopoverX plugin properties:
+    - `autoPlaceSmallScreen`: _boolean_, defaults to `true`, and if `true` will attempt to auto place the popover on smaller screens or on window resize.
+    - `smallScreenWidth`: _boolean_, defaults to `640`, above rule will be applied for device screen width less than this size.
 - Implement `package.json` for npm update.
 - (enh #29): Add `img` folder and indicator for the `popover-loading` css style.
 

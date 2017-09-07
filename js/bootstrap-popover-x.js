@@ -158,6 +158,14 @@
                 });
             }
             $dialog.on('click.dismiss' + NAMESPACE, '[data-dismiss="popover-x"]', $.proxy(self.hide, self));
+            $(window).resize(function() {
+                if ($dialog.hasClass('kv-popover-active')) {
+                    self.hide();
+                    setTimeout(function() {
+                        self.show(true);
+                    }, 50);
+                }
+            });
         },
         getPlacement: function () {
             var self = this, pos = self.getPosition(), placement = self.options.placement,
@@ -165,39 +173,43 @@
                 scrollTop = Math.max(db.scrollTop || 0, de.scrollTop), isH = placement === 'horizontal',
                 scrollLeft = Math.max(db.scrollLeft || 0, de.scrollLeft), isV = placement === 'vertical',
                 pageX = Math.max(0, pos.left - scrollLeft), pageY = Math.max(0, pos.top - scrollTop),
-                autoPlace = placement === 'auto' || isH || isV;
+                autoPlace = placement === 'auto' || isH || isV, 
+                width = window.innerWidth || de || document.body.clientWidth;
+            if (self.options.autoPlaceSmallScreen && width < self.options.smallScreenWidth) {
+                autoPlace = true;
+            }
             if (autoPlace) {
                 if (pageX < cw / 3) {
                     if (pageY < ch / 3) {
-                        return isH ? 'right right-bottom' : 'bottom bottom-right';
+                        return isH ? 'right right-top' : 'bottom bottom-left';
                     }
                     if (pageY < ch * 2 / 3) {
-                        return isV ? (pageY <= ch / 2 ? 'bottom bottom-right' : 'top top-right') : 'right';
+                        return isV ? (pageY <= ch / 2 ? 'bottom bottom-left' : 'top top-left') : 'right';
                     }
-                    return isH ? 'right right-top' : 'top top-right';
+                    return isH ? 'right right-bottom' : 'top top-left';
                 }
                 if (pageX < cw * 2 / 3) {
                     if (pageY < ch / 3) {
-                        return isH ? (pageX <= cw / 2 ? 'right right-bottom' : 'left left-bottom') : 'bottom';
+                        return isH ? (pageX <= cw / 2 ? 'right right-top' : 'left left-top') : 'bottom';
                     }
                     if (pageY < ch * 2 / 3) {
                         return isH ? pageX <= cw / 2 ? 'right' : 'left' : pageY <= ch / 2 ? 'bottom' : 'top';
                     }
-                    return isH ? pageX <= cw / 2 ? 'right right-top' : 'left left-top' : 'top';
+                    return isH ? pageX <= cw / 2 ? 'right right-bottom' : 'left left-bottom' : 'top';
                 }
                 if (pageY < ch / 3) {
-                    return isH ? 'left left-bottom' : 'bottom bottom-left';
+                    return isH ? 'left left-top' : 'bottom bottom-left';
                 }
                 if (pageY < ch * 2 / 3) {
-                    return isV ? pageY <= ch / 2 ? 'bottom-left' : 'top-left' : 'left';
+                    return isV ? pageY <= ch / 2 ? 'bottom-right' : 'top-right' : 'left';
                 }
-                return isH ? 'left left-top' : 'top top-left';
+                return isH ? 'left left-bottom' : 'top top-left';
             }
             switch (placement) {
                 case 'auto-top':
-                    return pageX < cw / 3 ? 'top top-right' : (pageX < cw * 2 / 3 ? 'top' : 'top top-left');
+                    return pageX < cw / 3 ? 'top top-left' : (pageX < cw * 2 / 3 ? 'top' : 'top top-right');
                 case 'auto-bottom':
-                    return pageX < cw / 3 ? 'bottom bottom-right' : (pageX < cw * 2 / 3 ? 'bottom' : 'bottom bottom-left');
+                    return pageX < cw / 3 ? 'bottom bottom-left' : (pageX < cw * 2 / 3 ? 'bottom' : 'bottom bottom-right');
                 case 'auto-left':
                     return pageY < ch / 3 ? 'left left-top' : (pageY < ch * 2 / 3 ? 'left' : 'left left-bottom');
                 case 'auto-right':
@@ -294,11 +306,13 @@
         hide: function () {
             var self = this, $dialog = self.$element;
             self.$body.removeClass('popover-x-body');
+            $dialog.removeClass('kv-popover-active');
             $.fn.modal.Constructor.prototype.hide.apply(self, arguments);
             $dialog.insertBefore(self.$marker);
         },
         show: function (skipValidation) {
             var self = this, $dialog = self.$element;
+            $dialog.addClass('kv-popover-active');
             $dialog.css({top: 0, left: 0, display: 'block', 'z-index': 1050}).appendTo(self.$body);
             $.fn.modal.Constructor.prototype.show.apply(self, arguments);
             self.$body.css({'padding': 0});
@@ -358,6 +372,8 @@
     $.fn.popoverX.defaults = $.extend(true, {}, $.fn.modal.defaults, {
         placement: 'auto',
         keyboard: true,
+        autoPlaceSmallScreen: true,
+        smallScreenWidth: 640,
         closeOpenPopovers: true,
         show: false,
         backdrop: null
