@@ -365,7 +365,7 @@
     $.fn.popoverButton.Constructor = PopoverButton;
     $.fn.popoverX.Constructor = PopoverX;
 
-    $(document).on('ready', function () {
+    $(document).ready(function () {
         var $btns = $("[data-toggle='popover-x']");
         if ($btns.length) {
             $btns.popoverButton();
