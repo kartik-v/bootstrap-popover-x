@@ -1,16 +1,130 @@
 /*!
  * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
- * @version 1.4.4
+ * @version 1.4.5
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
  * For more JQuery/Bootstrap plugins and demos visit http://plugins.krajee.com
  * For more Yii related demos visit http://demos.krajee.com
  */
-.popover {
-    padding: 0;
+/* Hide popover markup by default */
+.popover-x {
+    display: none;
+    border: 1px solid #ccc;
+    /*noinspection CssOverwrittenProperties*/
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
 
+.popover-x .popover-title {
+    border-radius: 5px 5px 0 0;
+}
+
+/* Popover & arrow styles for BS4 */
+.popover-x.top {
+    margin-top: -10px;
+}
+
+.popover-x.right {
+    margin-left: 10px;
+}
+
+.popover-x.bottom {
+    margin-top: 10px;
+}
+
+.popover-x.left {
+    margin-left: -10px;
+}
+
+.popover-x > .arrow, .popover-x > .arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+}
+
+.popover-x > .arrow {
+    border-width: 11px;
+}
+
+.popover-x > .arrow:after {
+    content: "";
+    border-width: 10px;
+}
+
+.popover-x.top > .arrow {
+    bottom: -11px;
+    left: 50%;
+    margin-left: -11px;
+    border-top-color: #999;
+    border-top-color: rgba(0, 0, 0, .25);
+    border-bottom-width: 0;
+}
+
+.popover-x.top > .arrow:after {
+    bottom: 1px;
+    margin-left: -10px;
+    content: " ";
+    border-top-color: #fff;
+    border-bottom-width: 0;
+}
+
+.popover-x.right > .arrow {
+    top: 50%;
+    left: -11px;
+    margin-top: -11px;
+    border-right-color: #999;
+    border-right-color: rgba(0, 0, 0, .25);
+    border-left-width: 0;
+}
+
+.popover-x.right > .arrow:after {
+    bottom: -10px;
+    left: 1px;
+    content: " ";
+    border-right-color: #fff;
+    border-left-width: 0;
+}
+
+.popover-x.bottom > .arrow {
+    top: -11px;
+    left: 50%;
+    margin-left: -11px;
+    border-top-width: 0;
+    border-bottom-color: #999;
+    border-bottom-color: rgba(0, 0, 0, .25);
+}
+
+.popover-x.bottom > .arrow:after {
+    top: 1px;
+    margin-left: -10px;
+    content: " ";
+    border-top-width: 0;
+    border-bottom-color: #fff;
+}
+
+.popover-x.left > .arrow {
+    top: 50%;
+    right: -11px;
+    margin-top: -11px;
+    border-right-width: 0;
+    border-left-color: #999;
+    border-left-color: rgba(0, 0, 0, .25);
+}
+
+.popover-x.left > .arrow:after {
+    right: 1px;
+    bottom: -10px;
+    content: " ";
+    border-right-width: 0;
+    border-left-color: #fff;
+}
+
+/* Sizes */
 .popover-lg {
     min-width: 480px;
 }
@@ -19,24 +133,24 @@
     min-width: 350px;
 }
 
-.popover > .close {
-    float: right;
-    margin: 7px 9px 7px 7px;
+.popover-x .close {
+    line-height: 20px;
+    outline: none;
 }
 
-.popover.top-right > .arrow, .popover.bottom-right > .arrow {
+.popover-x.top-right > .arrow, .popover-x.bottom-right > .arrow {
     left: 90%;
 }
 
-.popover.top-left > .arrow, .popover.bottom-left > .arrow {
+.popover-x.top-left > .arrow, .popover-x.bottom-left > .arrow {
     left: 10%;
 }
 
-.popover.left-top > .arrow, .popover.right-top > .arrow {
+.popover-x.left-top > .arrow, .popover-x.right-top > .arrow {
     top: 10%;
 }
 
-.popover.left-bottom > .arrow, .popover.right-bottom > .arrow {
+.popover-x.left-bottom > .arrow, .popover-x.right-bottom > .arrow {
     top: 90%;
 }
 
@@ -45,7 +159,7 @@
 }
 
 .popover-primary.bottom > .arrow:after {
-    border-bottom-color: #428bca;
+    border-bottom-color: #cce5ff;
 }
 
 .popover-success.bottom > .arrow:after {
@@ -73,11 +187,11 @@
 }
 
 .popover-primary.left-top > .arrow:after {
-    border-left-color: #428bca;
+    border-left-color: #cce5ff;
 }
 
 .popover-primary.right-top > .arrow:after {
-    border-right-color: #428bca;
+    border-right-color: #cce5ff;
 }
 
 .popover-success.left-top > .arrow:after {
@@ -105,11 +219,11 @@
 }
 
 .popover-info.left-top > .arrow:after {
-    border-left-color: #d9edf7;
+    border-left-color: #d1ecf1;
 }
 
 .popover-info.right-top > .arrow:after {
-    border-right-color: #d9edf7;
+    border-right-color: #d1ecf1;
 }
 
 .popover-default > .popover-title {
@@ -118,9 +232,9 @@
 }
 
 .popover-primary > .popover-title {
-    color: #fff;
-    background-color: #428bca;
-    border: 2px solid #428bca;
+    color: #004085;
+    background-color: #cce5ff;
+    border-bottom: 1px solid #b8daff;
 }
 
 .popover-success > .popover-title {
@@ -130,9 +244,9 @@
 }
 
 .popover-info > .popover-title {
-    color: #31708f;
-    background-color: #d9edf7;
-    border-bottom: 1px solid #bce8f1;
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-bottom: 1px solid #bee5eb;
 }
 
 .popover-warning > .popover-title {
@@ -168,16 +282,16 @@
     margin-left: 0;
 }
 
-.popover.has-footer.top > .arrow:after, .has-footer.popover.top > .arrow:after {
+.popover-x.has-footer.top > .arrow:after, .has-footer.popover-x.top > .arrow:after {
     border-top-color: #fbfbfb;
 }
 
-.popover.has-footer.left-bottom > .arrow:after {
+.popover-x.has-footer.left-bottom > .arrow:after {
     border-top-color: transparent;
     border-left-color: #fbfbfb;
 }
 
-.popover.has-footer.right-bottom > .arrow:after {
+.popover-x.has-footer.right-bottom > .arrow:after {
     border-top-color: transparent;
     border-right-color: #fbfbfb;
 }
@@ -187,11 +301,20 @@
     background: url('../img/loading.gif') center center;
 }
 
+/* hide modal backdrop */
+.popover-x-body .modal-backdrop {
+    opacity: 1;
+    z-index: 1;
+    background: transparent;
+    display: none;
+}
+
 .popover-x-body.modal-open {
     overflow-y: auto;
 }
 
- /* popover must be behind bootstrap navbar when scrolled */
+/* popover must be behind bootstrap navbar when scrolled */
 .popover-x-body .navbar {
-    z-index:1051;
+    z-index: 1051;
+    margin-right: -10px;
 }

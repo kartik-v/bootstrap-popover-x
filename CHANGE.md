@@ -1,6 +1,12 @@
 Change Log: `bootstrap-popover-x`
 =================================
 
+## Version 1.4.5
+
+**Date:** 08-Sep-2017
+
+- (enh #32): Enhancements to support Bootstrap v4.x framework.
+
 ## Version 1.4.4
 
 **Date:** 07-Sep-2017
