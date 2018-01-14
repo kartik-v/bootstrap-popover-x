@@ -296,11 +296,6 @@
     border-right-color: #fbfbfb;
 }
 
-.popover-loading {
-    padding: 30px;
-    background: url('../img/loading.gif') center center;
-}
-
 /* hide modal backdrop */
 .popover-x-body .modal-backdrop {
     opacity: 1;
