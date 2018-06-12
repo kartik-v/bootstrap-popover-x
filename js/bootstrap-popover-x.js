@@ -150,7 +150,7 @@
     PopoverX.prototype = $.extend({}, $.fn.modal.Constructor.prototype, {
         constructor: PopoverX,
         init: function () {
-            var self = this, $dialog = self.$element, $container = self.options.$container;
+            var self = this, $dialog = self.$element, $container = $(self.options.container);
             if ($container && $container.length) {
                 self.$body = $container;
             }
