@@ -3,8 +3,9 @@ Change Log: `bootstrap-popover-x`
 
 ## Version 1.4.5
 
-**Date:** 08-Sep-2017
+**Date:** 13-Sep-2018
 
+- Enhance bootstrap 4 arrow positioning via CSS class `is-bs4` on popover container.
 - (enh #32): Enhancements to support Bootstrap v4.x framework.
 
 ## Version 1.4.4

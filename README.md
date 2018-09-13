@@ -3,7 +3,7 @@ bootstrap-popover-x
 
 Bootstrap Popover Extended - Popover with modal behavior, multiple placements, automatic placements, ability to load content dynamically, and more other styling enhancements. The plugin enhances the styles for Bootstrap 3.x, and incorporates various additional styling options. This plugin was originally inspired by [BootstrapModalPopover](http://scruffles.github.io/BootstrapModalPopover/) for Bootstrap 2.x, and has been significantly enhanced for Bootstrap 3.x and includes various new features.
 
-> NOTE: The latest version of the plugin v1.4.5 has been released. From release v1.4.5, Bootstrap 4.x framework is also supported along with Bootstrap 3.x. Refer the [CHANGE LOG](https://github.com/kartik-v/bootstrap-popover-x/blob/master/CHANGE.md) for details.
+> NOTE: Refer the [CHANGE LOG](https://github.com/kartik-v/bootstrap-popover-x/blob/master/CHANGE.md) for details of changes to various releases. From release v1.4.5, Bootstrap 4.x framework is also supported along with Bootstrap 3.x.
 
 ## Features  
 
@@ -108,7 +108,7 @@ to target a specific popover to toggle.
 
 ```html
 <button class="btn btn-primary btn-lg" data-toggle="popover-x" data-target="#myPopover1" data-placement="top">Top</button>
-<div id="myPopover1" class="popover popover-x popover-default">
+<div id="myPopover1" class="popover popover-x is-bs4 popover-default"> <!-- the is-bs4 class is needed for bootstrap 4 styling -->
     <div class="arrow"></div>
     <h3 class="popover-header popover-title"><span class="close" data-dismiss="popover-x">&times;</span>Title</h3>
     <div class="popover-body popover-content">
@@ -116,6 +116,9 @@ to target a specific popover to toggle.
     </div>
 </div>
 ```
+> NOTE: The 
+
+ 
 
 ### Option 2: Via javascript
 
