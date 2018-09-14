@@ -1,6 +1,6 @@
 /*!
- * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
- * @version 1.4.6
+ * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2018
+ * @version 1.4.7
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -325,7 +325,7 @@
         show: function (skipValidation) {
             var self = this, $dialog = self.$element;
             $dialog.addClass('kv-popover-active');
-            $dialog.css({top: 0, left: 0, display: 'block', 'z-index': 1050}).appendTo(self.$body);
+            $dialog.css(self.options.dialogCss).appendTo(self.$body);
             if (!skipValidation) {
                 self.validateOpenPopovers();
             }
@@ -383,6 +383,7 @@
     $.fn.popoverButton.defaults = {trigger: 'click keyup'};
     $.fn.popoverX.defaults = $.extend(true, {}, $.fn.modal.defaults, {
         placement: 'auto',
+        dialogCss: {top: 0, left: 0, display: 'block', 'z-index': 1050},
         keyboard: true,
         autoPlaceSmallScreen: true,
         smallScreenWidth: 640,

@@ -3,7 +3,7 @@
     "description": "Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.",
     "keywords": ["bootstrap", "popover", "popover-x", "extended", "modal", "modal-popover", "jquery"],
     "homepage": "https://github.com/kartik-v/bootstrap-popover-x",
-    "license": "BSD 3-Clause",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "Kartik Visweswaran",

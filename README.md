@@ -148,4 +148,4 @@ View the [plugin documentation](http://plugins.krajee.com/popover-x) and [plugin
 
 ## License
 
-**bootstrap-popover-x** is released under the BSD 3-Clause License. See the bundled `LICENSE.md` for details.
+**bootstrap-popover-x** is released under the BSD-3-Clause License. See the bundled `LICENSE.md` for details.

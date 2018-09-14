@@ -1,6 +1,12 @@
 Change Log: `bootstrap-popover-x`
 =================================
 
+## Version 1.4.7
+
+**Date:** 14-Sep-2018
+
+- New `dialogCss` property to allow setting dialog CSS style attributes before load.
+
 ## Version 1.4.5
 
 **Date:** 13-Sep-2018
