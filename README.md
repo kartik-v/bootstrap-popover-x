@@ -1,5 +1,15 @@
-bootstrap-popover-x
-=====================
+<h1 align="center">
+    <a href="http://plugins.krajee.com" title="Krajee Plugins" target="_blank">
+        <img src="http://kartik-v.github.io/bootstrap-fileinput-samples/samples/krajee-logo-b.png" alt="Krajee Logo"/>
+    </a>
+    <br>
+    bootstrap-popover-x
+    <hr>
+    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DTP3NZQ6G2AYU"
+       title="Donate via Paypal" target="_blank">
+        <img src="http://kartik-v.github.io/bootstrap-fileinput-samples/samples/donate.png" alt="Donate"/>
+    </a>
+</h1>
 
 Bootstrap Popover Extended - Popover with modal behavior, multiple placements, automatic placements, ability to load content dynamically, and more other styling enhancements. The plugin enhances the styles for Bootstrap 3.x, and incorporates various additional styling options. This plugin was originally inspired by [BootstrapModalPopover](http://scruffles.github.io/BootstrapModalPopover/) for Bootstrap 2.x, and has been significantly enhanced for Bootstrap 3.x and includes various new features.
 
