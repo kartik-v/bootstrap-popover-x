@@ -9,8 +9,8 @@
     "bugs": {
         "url": "https://github.com/kartik-v/bootstrap-popover-x/issues"
     },
-    "repository" : {
-        "type": "git", 
+    "repository": {
+        "type": "git",
         "url": "https://github.com/kartik-v/bootstrap-popover-x.git"
     },
     "main": "./js/bootstrap-popover-x.min.js",
@@ -18,8 +18,8 @@
     "keywords": [
         "bootstrap",
         "popover",
-        "extended", 
-        "modal", 
+        "extended",
+        "modal",
         "modal-popover",
         "jquery"
     ],
@@ -27,5 +27,15 @@
         "jquery": ">= 1.9.0",
         "bootstrap": "~3"
     },
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "dependencies": {
+        "opencollective-postinstall": "^2.0.2"
+    },
+    "collective": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/bootstrap-popover-x"
+    },
+    "scripts": {
+        "postinstall": "opencollective-postinstall || true"
+    }
 }
