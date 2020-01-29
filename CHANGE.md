@@ -1,6 +1,12 @@
 Change Log: `bootstrap-popover-x`
 =================================
 
+## Version 1.4.8
+
+**Date:** 29-Jan-2020
+
+- (enh #40): Correct arrow CSS styles
+
 ## Version 1.4.7
 
 **Date:** 14-Sep-2018
