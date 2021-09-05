@@ -11,9 +11,9 @@
     </a>
 </h1>
 
-Bootstrap Popover Extended - Popover with modal behavior, multiple placements, automatic placements, ability to load content dynamically, and more other styling enhancements. The plugin enhances the styles for Bootstrap 3.x, and incorporates various additional styling options. This plugin was originally inspired by [BootstrapModalPopover](http://scruffles.github.io/BootstrapModalPopover/) for Bootstrap 2.x, and has been significantly enhanced for Bootstrap 3.x and includes various new features.
+Bootstrap Popover Extended - Popover with modal behavior, multiple placements, automatic placements, ability to load content dynamically, and more other styling enhancements. The plugin uses enhanced styling specific for Bootstrap versions 5.x, 4.x or 3.x, and incorporates various additional styling options. This plugin was originally inspired by [BootstrapModalPopover](http://scruffles.github.io/BootstrapModalPopover/) for Bootstrap 2.x, and has been significantly enhanced for Bootstrap 3.x and includes various new features.
 
-> NOTE: Refer the [CHANGE LOG](https://github.com/kartik-v/bootstrap-popover-x/blob/master/CHANGE.md) for details of changes to various releases. From release v1.4.5, Bootstrap 4.x framework is also supported along with Bootstrap 3.x.
+> NOTE: Refer the [CHANGE LOG](https://github.com/kartik-v/bootstrap-popover-x/blob/master/CHANGE.md) for details of changes to various releases. From release v1.4.8, all bootstrap libraries from bootstrap 3.x to bootstrap 4.x and 5.x is supported. 
 
 ## Features  
 
@@ -59,7 +59,7 @@ View the [plugin documentation](http://plugins.krajee.com/popover-x) and [plugin
 
 ## Pre-requisites  
 
-1. [Bootstrap 4.x or 3.x](http://getbootstrap.com/) (Requires bootstrap `modal.js`)
+1. [Bootstrap 5.x or 4.x or 3.x](http://getbootstrap.com/) (Requires bootstrap `modal.js`)
 2. Latest [JQuery](http://jquery.com/)
 3. Most browsers supporting CSS3 & JQuery. 
 
@@ -92,16 +92,12 @@ You can also manually install the plugin easily to your project. Just download t
 You must first load the following assets in your header. 
 
 ```html
-<!-- bootstrap 4.x is supported. You can also use the bootstrap css 3.3.x versions -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<!-- bootstrap 5.x, 4.x or 3.x is supported -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
 <link href="path/to/css/bootstrap-popover-x.min.css" media="all" rel="stylesheet" type="text/css" />
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<!-- popper.min.js below is needed if you use bootstrap 4.x. You can also use the bootstrap js 
-   3.3.x versions without popper.min.js. -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-<!-- bootstrap.min.js below is needed for modal dialog dependency. bootstrap 4.x is supported. 
-   You can also use the bootstrap js 3.3.x versions. -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- bootstrap.min.js below is needed for modal dialog dependency. -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 <script src="path/to/js/bootstrap-popover-x.min.js" type="text/javascript"></script>
 ```
 
@@ -126,10 +122,7 @@ to target a specific popover to toggle.
     </div>
 </div>
 ```
-> NOTE: The 
-
  
-
 ### Option 2: Via javascript
 
 Alternatively, you can initialize the popover manually on your page via javascript using the `PopoverButton` plugin. This feature is typically useful when  dynamically rendering content and dynamically enabling an element to trigger the popover.

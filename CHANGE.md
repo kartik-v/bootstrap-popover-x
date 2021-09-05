@@ -3,8 +3,10 @@ Change Log: `bootstrap-popover-x`
 
 ## Version 1.4.8
 
-**Date:** 29-Jan-2020
+**Date:** 05-Sep-2021
 
+- (enh #43): Enhancements to support Bootstrap v5.x.
+- (enh #41): Correct jQuery load.
 - (enh #40): Correct arrow CSS styles
 
 ## Version 1.4.7
