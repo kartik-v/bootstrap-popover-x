@@ -6,10 +6,21 @@
     bootstrap-popover-x
     <hr>
     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DTP3NZQ6G2AYU"
-       title="Donate via Paypal" target="_blank">
-        <img src="http://kartik-v.github.io/bootstrap-fileinput-samples/samples/donate.png" alt="Donate"/>
-    </a>
+       title="Donate via Paypal" target="_blank"><img src="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/donate.png" height="60" alt="Donate"/></a>
+    &nbsp; &nbsp; &nbsp;
+    <a href="https://www.buymeacoffee.com/kartikv" title="Buy me a coffee" ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="60" alt="kartikv" /></a>
 </h1>
+
+<div align="center">
+
+[![Financial Contributors on Open Collective](https://opencollective.com/bootstrap-popover-x/all/badge.svg?label=financial+contributors)](https://opencollective.com/bootstrap-popover-x)
+[![Bower version](https://badge.fury.io/bo/bootstrap-popover-x.svg)](http://badge.fury.io/bo/bootstrap-popover-x)
+[![Latest Stable Version](https://poser.pugx.org/kartik-v/bootstrap-popover-x/v/stable)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
+[![License](https://poser.pugx.org/kartik-v/bootstrap-popover-x/license)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
+[![Packagist Downloads](https://poser.pugx.org/kartik-v/bootstrap-popover-x/downloads)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
+[![Monthly Downloads](https://poser.pugx.org/kartik-v/bootstrap-popover-x/d/monthly)](https://packagist.org/packages/kartik-v/bootstrap-popover-x)
+
+</div>
 
 Bootstrap Popover Extended - Popover with modal behavior, multiple placements, automatic placements, ability to load content dynamically, and more other styling enhancements. The plugin uses enhanced styling specific for Bootstrap versions 5.x, 4.x or 3.x, and incorporates various additional styling options. This plugin was originally inspired by [BootstrapModalPopover](http://scruffles.github.io/BootstrapModalPopover/) for Bootstrap 2.x, and has been significantly enhanced for Bootstrap 3.x and includes various new features.
 
