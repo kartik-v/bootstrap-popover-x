@@ -104,11 +104,11 @@ You must first load the following assets in your header.
 
 ```html
 <!-- bootstrap 5.x, 4.x or 3.x is supported -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
 <link href="path/to/css/bootstrap-popover-x.min.css" media="all" rel="stylesheet" type="text/css" />
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- bootstrap.min.js below is needed for modal dialog dependency. -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 <script src="path/to/js/bootstrap-popover-x.min.js" type="text/javascript"></script>
 ```
 

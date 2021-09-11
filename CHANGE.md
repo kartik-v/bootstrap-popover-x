@@ -1,6 +1,21 @@
 Change Log: `bootstrap-popover-x`
 =================================
 
+## Version 1.4.9
+
+**Date:** 11-Sep-2021
+
+- (enh #45): Enhance popover-x to be initialized effectively via custom JS.
+  Popover-x can be initialized separately via custom javascript using the `popoverButton` plugin
+```js
+$('#myCustomButton').popoverButton({
+    target: '#myCustomDialog',
+    placement: 'auto'
+});
+```
+- (enh #44): Enhancements to popover-x to work effectively with bootstrap modals.
+- Enhance plugin to work better with NPM module.
+
 ## Version 1.4.8
 
 **Date:** 05-Sep-2021

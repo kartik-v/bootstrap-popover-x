@@ -1,6 +1,6 @@
 /*!
  * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
- * @version 1.4.8
+ * @version 1.4.9
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -325,14 +325,6 @@
 .popover-loading {
     padding: 30px;
     background: url('../img/loading.gif') center center;
-}
-
-/* hide modal backdrop */
-.popover-x-body .modal-backdrop {
-    opacity: 1;
-    z-index: 1;
-    background: transparent;
-    display: none;
 }
 
 .popover-x-body.modal-open {

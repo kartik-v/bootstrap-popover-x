@@ -1,6 +1,6 @@
 /*!
  * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
- * @version 1.4.8
+ * @version 1.4.9
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -8,23 +8,16 @@
  * For more Yii related demos visit http://demos.krajee.com
  */
 (function (factory) {
-    "use strict";
-    //noinspection JSUnresolvedVariable
-    if (typeof define === 'function' && define.amd) { // jshint ignore:line
-        // AMD. Register as an anonymous module.
-        define(['jquery'], factory); // jshint ignore:line
-    } else { // noinspection JSUnresolvedVariable
-        if (typeof module === 'object' && module.exports) { // jshint ignore:line
-            // Node/CommonJS
-            // noinspection JSUnresolvedVariable
-            module.exports = factory(require('jquery')); // jshint ignore:line
-        } else {
-            // Browser globals
-            factory(window.jQuery);
-        }
+    'use strict';
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery', 'window', 'document'], factory);
+    } else if (typeof module === 'object' && typeof module.exports === 'object') {
+        factory(require('jquery'), window, document);
+    } else {
+        factory(window.jQuery, window, document);
     }
-}(function ($) {
-    "use strict";
+}(function ($, window, document, undefined) {
+    'use strict';
 
     if (!$.fn.popoverXBsVersion) {
         $.fn.popoverXBsVersion = (window.Modal && window.Modal.VERSION) ||
@@ -35,6 +28,7 @@
     // global helper object
     $h = {
         NAMESPACE: '.popoverX',
+        modalOptions: ['keyboard', 'focus', 'show'],
         kvLog: function (msg) {
             msg = 'bootstrap-popover-x: ' + msg;
             if (window.console && window.console.log) {
@@ -87,26 +81,37 @@
         constructor: PopoverButton,
         init: function () {
             var self = this, $el = self.$element, options = self.options || {}, triggers, $dialog,
-                href = $el.attr('href'), initException;
-            initException = function (msg) {
-                $h.kvLog('PopoverX initialization skipped! ' + msg);
-            };
+                href = $el.attr('href'), initException = function (msg) {
+                    $h.kvLog('PopoverX initialization skipped! ' + msg);
+                };
             self.href = href;
             if (!$el || !$el.length) {
                 initException('PopoverX triggering button element could not be found.');
                 return;
             }
+
+            // always set this to get the closePopoverOnBlur behavior correct
+            $el.attr('data-toggle', 'popover-x');
+
             if (options.target) {
+                $el.data('target', options.target)
                 $dialog = $(options.target);
             } else {
-                $dialog = $($el.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))); //strip for ie7
+                $dialog = $($el.data('target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))); //strip for ie7
             }
-            $h.addCss($dialog, 'popover-x');
-            self.$dialog = $dialog;
+
             if (!$dialog.length) {
                 initException('PopoverX dialog element could not be found.');
                 return;
             }
+            self.$dialog = $dialog;
+
+            // disable modal backdrop for popover-x permanently
+            $dialog.attr($h.getDataAttr('backdrop'), 'false');
+
+            // init popover-x styling
+            $h.addCss($dialog, 'popover-x');
+
             if (!$dialog.data('popover-x')) {
                 var opts = $.extend(true, {remote: href && !/#/.test(href)}, $dialog.data(), $el.data(), options);
                 opts.$target = $el;
@@ -169,18 +174,22 @@
         constructor: PopoverX,
         init: function () {
             var self = this, $dialog = self.$element, opts = self.options, $container = opts.$container,
-                isBs5 = $h.isBs(5), modalOptions = ['keyboard', 'backdrop', 'focus', 'show'];
+                isBs5 = $h.isBs(5);
             if ($container && $container.length) {
                 self.$body = $container;
             }
             if (!self.$body || !self.$body.length) {
                 self.$body = $(document.body);
             }
-            $.each(modalOptions, function (key, prop) {
+            $.each($h.modalOptions, function (key, prop) {
                 if (opts[prop]) {
                     $dialog.attr($h.getDataAttr(prop), opts[prop]);
                 }
             });
+
+            // disable modal backdrop for popover-x permanently
+            $dialog.attr($h.getDataAttr('backdrop'), 'false');
+
             if (isBs5 && !$dialog.find('.modal-dialog').length) {
                 $(document.createElement('div')).addClass('modal-dialog').css({margin: 0, 'pointer-events': 'all'})
                     .insertAfter($dialog).append($dialog.contents()).appendTo($dialog);
@@ -201,16 +210,32 @@
             $dialog.on('click.dismiss' + $h.NAMESPACE, '[data-dismiss="popover-x"]', $.proxy(self.hide, self));
 
             if (opts.closePopoverOnBlur) {
-                $(document).on('click', function (event) {
-                    var $clicked = $(event.target);
+                $(document).on('click', function (e) {
+                    var $clicked = $(e.target);
                     if ($clicked.closest('[data-toggle="popover-x"]').length) {
                         return;
                     } else if ($clicked.closest('.popover-x').length) {
-                        event.stopPropagation();
+                        e.stopPropagation();
                     } else {
                         $('.popover-x:visible').popoverX('hide');
                     }
                 });
+            }
+
+            // close any open popovers embedded inside any bootstrap modal dialog
+            var ev = 'hide.bs.modal.popoverX', $modal = $('.modal'), $popovers;
+            if ($modal.length) {
+                $popovers = $modal.find("[data-toggle='popover-x']");
+                if ($popovers.length) {
+                    $modal.off(ev).on(ev, function () {
+                        $popovers.each(function () {
+                            var targ = $(this).data('target') || null, $popover = $(targ);
+                            if ($popover.length && $popover.is(':visible')) {
+                                $popover.popoverX('hide');
+                            }
+                        });
+                    });
+                }
             }
 
             $(window).resize(function () {
@@ -435,16 +460,14 @@
     $.fn.popoverButton.defaults = {trigger: 'click keyup'};
     $.fn.popoverX.defaults = $.extend(true, {}, {
         placement: 'auto',
-        dialogCss: {top: 0, left: 0, display: 'block', 'z-index': 1050},
+        dialogCss: {top: 0, left: 0, display: 'block', 'z-index': 1065},
         autoPlaceSmallScreen: true,
         smallScreenWidth: 640,
         closeOpenPopovers: true,
         closePopoverOnBlur: true,
-        // bootstrap modal options
+        // other options below common with bootstrap modal
         keyboard: true,
-        backdrop: 'static',
-        focus: true,
-        show: false
+        focus: true
     });
     $.fn.popoverButton.Constructor = PopoverButton;
     $.fn.popoverX.Constructor = PopoverX;
