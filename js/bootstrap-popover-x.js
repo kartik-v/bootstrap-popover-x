@@ -1,6 +1,6 @@
 /*!
  * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
- * @version 1.4.9
+ * @version 1.5.0
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -10,13 +10,13 @@
 (function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
-        define(['jquery', 'window', 'document'], factory);
+        define(['jquery'], factory);
     } else if (typeof module === 'object' && typeof module.exports === 'object') {
-        factory(require('jquery'), window, document);
+        factory(require('jquery'));
     } else {
-        factory(window.jQuery, window, document);
+        factory(window.jQuery);
     }
-}(function ($, window, document, undefined) {
+}(function ($) {
     'use strict';
 
     if (!$.fn.popoverXBsVersion) {

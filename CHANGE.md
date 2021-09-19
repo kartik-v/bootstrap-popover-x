@@ -1,6 +1,12 @@
 Change Log: `bootstrap-popover-x`
 =================================
 
+## Version 1.5.0
+
+**Date:** 19-Sep-2021
+
+- Simplify NPM module handling.
+
 ## Version 1.4.9
 
 **Date:** 11-Sep-2021
