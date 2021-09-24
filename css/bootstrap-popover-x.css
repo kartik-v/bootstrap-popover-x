@@ -1,6 +1,6 @@
 /*!
  * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
- * @version 1.5.0
+ * @version 1.5.1
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -140,6 +140,7 @@
 .popover-md {
     min-width: 350px;
 }
+
 .popover-x .close {
     line-height: 0;
     margin-top: 8px;
@@ -328,5 +329,5 @@
 }
 
 .popover-x-body.modal-open {
-    overflow-y: auto!important;
+    overflow-y: auto !important;
 }
