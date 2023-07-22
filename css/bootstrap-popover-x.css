@@ -1,6 +1,6 @@
 /*!
- * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
- * @version 1.5.1
+ * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2023
+ * @version 1.5.2
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -9,6 +9,10 @@
  */
 /* Hide popover markup by default */
 .popover-x {
+    position: absolute;
+    top: 0;
+    left: 0 /* rtl:ignore */;
+    z-index: 1070;
     display: none;
     border: 1px solid #ccc;
     /*noinspection CssOverwrittenProperties*/
@@ -57,9 +61,9 @@
 }
 
 .popover-x.top .arrow {
-    bottom: -11px;
+    bottom: -10px;
     left: 50%;
-    margin-left: -11px;
+    margin-left: -10px;
     border-top-color: #999;
     border-top-color: rgba(0, 0, 0, .25);
     border-bottom-width: 0;
@@ -83,7 +87,7 @@
 }
 
 .popover-x.is-bs5.right .arrow {
-    left: -0.68rem;
+    left: -0.65rem;
 }
 
 .popover-x.right .arrow:after {
@@ -95,9 +99,9 @@
 }
 
 .popover-x.bottom .arrow {
-    top: -11px;
+    top: -10px;
     left: 50%;
-    margin-left: -11px;
+    margin-left: -10px;
     border-top-width: 0;
     border-bottom-color: #999;
     border-bottom-color: rgba(0, 0, 0, .25);
@@ -121,7 +125,7 @@
 }
 
 .popover-x.is-bs5.left .arrow {
-    right: -0.68rem;
+    right: -0.65rem;
 }
 
 .popover-x.left .arrow:after {

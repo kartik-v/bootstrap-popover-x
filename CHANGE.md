@@ -1,6 +1,12 @@
 Change Log: `bootstrap-popover-x`
 =================================
 
+## Version 1.5.2
+
+**Date:** 23-Sep-2023
+
+- (bug #47): Fix breaking changes for Boostrap library version > 5.1.3.
+
 ## Version 1.5.1
 
 **Date:** 25-Sep-2021
