@@ -1,12 +1,18 @@
 Change Log: `bootstrap-popover-x`
 =================================
 
+## Version 1.5.4
+
+**Date:** 12-Mar-2024
+
+- (bug #51): Correct `isBs` method logic.
+
 ## Version 1.5.3
 
 **Date:** 11-Mar-2024
 
 - (bug #50): Fix and correct jQuery deprecated methods.
-  
+- 
 ## Version 1.5.2
 
 **Date:** 23-Sep-2023

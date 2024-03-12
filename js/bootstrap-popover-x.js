@@ -1,6 +1,6 @@
 /*!
  * @copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2024
- * @version 1.5.3
+ * @version 1.5.4
  *
  * Bootstrap Popover Extended - Popover with modal behavior, styling enhancements and more.
  *
@@ -48,10 +48,10 @@
             var ev = event + (prefix === undefined ? '.target' : prefix) + $h.NAMESPACE;
             return $el.trigger(ev);
         },
-        isBs: function (ver) {
+        isBs: function (v) {
 			var ver = $.fn.popoverXBsVersion;
             var chk = (ver === undefined || ver === null ? "" : ver).toString().trim();
-            ver = parseInt(ver, 10);
+            ver = parseInt(v, 10);
             if (!chk) {
                 return ver === 4;
             }
